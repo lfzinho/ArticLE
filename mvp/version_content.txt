@@ -1,0 +1,9 @@
+Esta primeira versão possui um dataset provisório e uma classe capaz de fazer queries através do PyVespa, rankeadas por BM25. Os próximos passos são:
+Também provisoriamente, estão sendo usados somente os primeiros 100 documentos do dataset e somente seus "abstracts", ao invés de seu conteúdo. Isto é devido à limitação de RAM dos computadores utilizados até o momento.
+
+Próximos passos:
+
+- Mergulhar na estrutura do Vespa e implementar o melhor "package" possível
+- Implementar um modelo que sumarize os documentos encontrados
+- Adequar os dados utilizados: passar a usar o conteúdo (e não o resumo) dos documentos e utilizar os documentos da nossa base
+- Executar em uma máquina mais adequada
