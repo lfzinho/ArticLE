@@ -43,10 +43,9 @@ at {idx+1} rank in response to the following question:
         # For the first few documents, generate a response
         for idx, doc in tqdm.tqdm(docs[:self.max_docs].iterrows()):
             prompt = prompt_modifier(idx, doc, question)
-            partial_response += pd.DataFrame(doc).to_markdown()
+            partial_response += pd.DataFrame(doc).T[['title', 'relevance', 'body']].to_markdown()
             model_answer = self.model.generate_content(prompt).text
-            print(model_answer)
-            partial_response += f'\n\n{model_answer}\n\n'
+            partial_response += f'\n\n{to_markdown(model_answer)}\n\n'
         # For the rest of the documents, just show the results
         docs = docs.iloc[self.max_docs:]
         return partial_response, docs
@@ -58,7 +57,7 @@ at {idx+1} rank in response to the following question:
             response_type: str
         ):
         response = ''
-        docs['body'] = docs['body'].str[:200]
+        docs['body'] = docs['body'].str[:100] + '...'
         docs['title'] = docs['title'].str.replace('\n', ' ')
         docs['body'] = docs['body'].str.replace('\n', ' ')
         # Generate prompts for the LLM based on response type
