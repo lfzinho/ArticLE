@@ -1,0 +1,420 @@
+,id,title,body,relevance
+0,0704.0773,Collective behavior of stock price movements in an emerging market,"  To investigate the universality of the structure of interactions in different
+<hi>markets</hi>, we analyze the cross-correlation matrix C of <hi>stock</hi> price fluctuations
+in the National <hi>Stock</hi> Exchange (NSE) of India. We find that this emerging
+<hi>market</hi> exhibits strong correlations in the movement of <hi>stock</hi> prices compared to
+developed <hi>markets</hi>, such as the New York <hi>Stock</hi> Exchange (NYSE). This is shown to
+be due to the dominant influence of a common <hi>market</hi> mode on the <hi>stock</hi> prices.
+By comparison, interactions between related stocks, e.g., those belonging to
+the same business sector, are much weaker. This lack of distinct sector
+identity in emerging <hi>markets</hi> is explicitly shown by reconstructing the network
+of mutually interacting stocks. Spectral analysis of C for NSE reveals that,
+the few largest eigenvalues deviate from the bulk of the spectrum predicted by
+random matrix theory, but they are far fewer in number compared to, e.g., NYSE.
+We show this to be due to the relative weakness of intra-sector interactions
+between stocks, compared to the <hi>market</hi> mode, by modeling <hi>stock</hi> price dynamics
+with a two-factor model. Our results suggest that the emergence of an internal
+structure comprising multiple groups of strongly coupled components is a
+signature of <hi>market</hi> development.
+",33.163408807271594
+1,0705.0076,"Deterministic Factors of Stock Networks based on Cross-correlation in
+  Financial Market","  The <hi>stock</hi> <hi>market</hi> has been known to form homogeneous <hi>stock</hi> groups with a
+higher correlation among different stocks according to common economic factors
+that influence individual stocks. We investigate the role of common economic
+factors in the <hi>market</hi> in the formation of <hi>stock</hi> networks, using the arbitrage
+pricing model reflecting essential properties of common economic factors. We
+find that the degree of consistency between real <hi>and</hi> model <hi>stock</hi> networks
+increases as additional common economic factors are incorporated into our
+model. Furthermore, we find that individual stocks with a large number of links
+to other stocks in a network are more highly correlated with common economic
+factors than those with a small number of links. This suggests that common
+economic factors in the <hi>stock</hi> <hi>market</hi> can be understood in terms of
+deterministic factors.
+",31.78728367238068
+2,0704.0664,Stock market return distributions: from past to present,"  We show that recent <hi>stock</hi> <hi>market</hi> fluctuations are characterized by the
+cumulative distributions whose tails on short, minute time scales exhibit power
+scaling with the scaling index alpha > 3 <hi>and</hi> this index tends to increase
+quickly with decreasing sampling frequency. Our study is based on
+high-frequency recordings of the S&P500, DAX <hi>and</hi> WIG20 indices over the
+interval May 2004 - May 2006. Our findings suggest that dynamics of the
+contemporary <hi>market</hi> may differ from the one observed in the past. This effect
+indicates a constantly increasing efficiency of world <hi>markets</hi>.
+",30.39269722904877
+3,0704.2115,"Uncovering the Internal Structure of the Indian Financial Market:
+  Cross-correlation behavior in the NSE","  The cross-correlations between price fluctuations of 201 frequently traded
+stocks in the National <hi>Stock</hi> Exchange (NSE) of India are analyzed in this
+paper. We use daily closing prices for the period 1996-2006, which coincides
+with the period of rapid transformation of the <hi>market</hi> following liberalization.
+The eigenvalue distribution of the cross-correlation matrix, $\mathbf{C}$, of
+NSE is found to be similar to that of developed <hi>markets</hi>, such as the New York
+<hi>Stock</hi> Exchange (NYSE): the majority of eigenvalues fall within the bounds
+expected for a random matrix constructed from mutually uncorrelated time
+series. Of the few largest eigenvalues that deviate from the bulk, the largest
+is identified with <hi>market</hi>-wide movements. The intermediate eigenvalues that
+occur between the largest <hi>and</hi> the bulk have been associated in NYSE with
+specific business sectors with strong intra-group interactions. However, in the
+Indian <hi>market</hi>, these deviating eigenvalues are comparatively very few <hi>and</hi> lie
+much closer to the bulk. We propose that this is because of the relative lack
+of distinct sector identity in the <hi>market</hi>, with the movement of stocks
+dominantly influenced by the overall <hi>market</hi> trend. This is shown by explicit
+construction of the interaction network in the <hi>market</hi>, first by generating the
+minimum spanning tree from the unfiltered correlation matrix, <hi>and</hi> later, using
+an improved method of generating the graph after filtering out the <hi>market</hi> mode
+<hi>and</hi> random effects from the <hi>data</hi>. Both methods show, compared to developed
+<hi>markets</hi>, the relative absence of clusters of co-moving stocks that belong to
+the same business sector. This is consistent with the general belief that
+emerging <hi>markets</hi> tend to be more correlated than developed <hi>markets</hi>.
+",23.35040403318725
+4,0704.3905,Ensemble Learning for Free with Evolutionary Algorithms ?,"  Evolutionary <hi>Learning</hi> proceeds by evolving a population of classifiers, from
+which it generally returns (with some notable exceptions) the single
+best-of-run classifier as final result. In the meanwhile, Ensemble <hi>Learning</hi>,
+one of the most efficient approaches in supervised <hi>Machine</hi> <hi>Learning</hi> for the
+last decade, proceeds by building a population of diverse classifiers. Ensemble
+<hi>Learning</hi> with Evolutionary Computation thus receives increasing attention. The
+Evolutionary Ensemble <hi>Learning</hi> (EEL) approach presented in this paper features
+two contributions. First, a new fitness function, inspired by co-evolution <hi>and</hi>
+enforcing the classifier diversity, is presented. Further, a new selection
+criterion based on the classification margin is proposed. This criterion is
+used to extract the classifier ensemble from the final population only
+(Off-line) or incrementally along evolution (On-line). Experiments on a set of
+benchmark problems show that Off-line outperforms single-hypothesis
+evolutionary <hi>learning</hi> <hi>and</hi> state-of-art Boosting <hi>and</hi> generates smaller
+classifier ensembles.
+",21.472965151658713
+5,0704.3453,"An Adaptive Strategy for the Classification of G-Protein Coupled
+  Receptors","  One of the major problems in computational biology is the inability of
+existing classification models to incorporate expanding <hi>and</hi> new domain
+knowledge. This problem of static classification models is addressed in this
+paper by the introduction of incremental <hi>learning</hi> for problems in
+bioinformatics. Many <hi>machine</hi> <hi>learning</hi> tools have been applied to this problem
+using static <hi>machine</hi> <hi>learning</hi> structures such as neural networks or support
+vector <hi>machines</hi> that are unable to accommodate new information into their
+existing models. We utilize the fuzzy ARTMAP as an alternate <hi>machine</hi> <hi>learning</hi>
+system that has the ability of incrementally <hi>learning</hi> new <hi>data</hi> as it becomes
+available. The fuzzy ARTMAP is found to be comparable to many of the widespread
+<hi>machine</hi> <hi>learning</hi> systems. The use of an evolutionary strategy in the selection
+<hi>and</hi> combination of individual classifiers into an ensemble system, coupled with
+the incremental <hi>learning</hi> ability of the fuzzy ARTMAP is proven to be suitable
+as a pattern classifier. The algorithm presented is tested using <hi>data</hi> from the
+G-Coupled Protein Receptors Database <hi>and</hi> shows good accuracy of 83%. The system
+presented is also generally applicable, <hi>and</hi> can be used in problems in genomics
+<hi>and</hi> proteomics.
+",21.08017183315221
+6,0705.0666,Validating module network learning algorithms using simulated data,"  In recent years, several authors have used probabilistic graphical models to
+learn expression modules <hi>and</hi> their regulatory programs from gene expression
+<hi>data</hi>. Here, we demonstrate the use of the synthetic <hi>data</hi> generator SynTReN for
+the purpose of testing <hi>and</hi> comparing module network <hi>learning</hi> algorithms. We
+introduce a software package for <hi>learning</hi> module networks, called LeMoNe, which
+incorporates a novel strategy for <hi>learning</hi> regulatory programs. Novelties
+include the use of a bottom-up Bayesian hierarchical clustering to construct
+the regulatory programs, <hi>and</hi> the use of a conditional entropy measure to assign
+regulators to the regulation program nodes. Using SynTReN <hi>data</hi>, we test the
+performance of LeMoNe in a completely controlled situation <hi>and</hi> assess the
+effect of the methodological changes we made with respect to an existing
+software package, namely Genomica. Additionally, we assess the effect of
+various parameters, such as the size of the <hi>data</hi> set <hi>and</hi> the amount of noise,
+on the inference performance. Overall, application of Genomica <hi>and</hi> LeMoNe to
+simulated <hi>data</hi> sets gave comparable results. However, LeMoNe offers some
+advantages, one of them being that the <hi>learning</hi> process is considerably faster
+for larger <hi>data</hi> sets. Additionally, we show that the location of the regulators
+in the LeMoNe regulation programs <hi>and</hi> their conditional entropy may be used to
+prioritize regulators for functional validation, <hi>and</hi> that the combination of
+the bottom-up clustering strategy with the conditional entropy-based assignment
+of regulators improves the handling of missing or hidden regulators.
+",20.382964379347328
+7,0705.4023,The limit order book on different time scales,"  Financial <hi>markets</hi> can be described on several time scales. We use <hi>data</hi> from
+the limit order book of the London <hi>Stock</hi> Exchange (LSE) to compare how the
+fluctuation dominated microstructure crosses over to a more systematic global
+behavior.
+",19.814294269579534
+8,0704.2139,Why only few are so successful ?,"  In many professons employees are rewarded according to their relative
+performance. Corresponding economy can be modeled by taking $N$ independent
+agents who gain from the <hi>market</hi> with a rate which depends on their current
+gain. We argue that this simple realistic rate generates a scale free
+distribution even though intrinsic ability of agents are marginally different
+from each other. As an evidence we provide distribution of scores for two
+different systems (a) the global <hi>stock</hi> game where players invest in real <hi>stock</hi>
+<hi>market</hi> <hi>and</hi> (b) the international cricket.
+",18.52453004663255
+9,0704.1099,The Epps effect revisited,"  We analyse the dependence of <hi>stock</hi> return cross-correlations on the sampling
+frequency of the <hi>data</hi> known as the Epps effect: For high resolution <hi>data</hi> the
+cross-correlations are significantly smaller than their asymptotic value as
+observed on daily <hi>data</hi>. The former description implies that changing trading
+frequency should alter the characteristic time of the phenomenon. This is not
+true for the empirical <hi>data</hi>: The Epps curves do not scale with <hi>market</hi> activity.
+The latter result indicates that the time scale of the phenomenon is connected
+to the reaction time of <hi>market</hi> participants (this we denote as human time
+scale), independent of <hi>market</hi> activity. In this paper we give a new description
+of the Epps effect through the decomposition of cross-correlations. After
+testing our method on a model of generated random walk price changes we justify
+our analytical results by fitting the Epps curves of real world <hi>data</hi>.
+",18.062293005294013
+10,0706.1127,"Redesigning Computer-based Learning Environments: Evaluation as
+  Communication","  In the field of evaluation research, computer scientists live constantly upon
+dilemmas <hi>and</hi> conflicting theories. As evaluation is differently perceived <hi>and</hi>
+modeled among educational areas, it is not difficult to become trapped in
+dilemmas, which reflects an epistemological weakness. Additionally, designing
+<hi>and</hi> developing a computer-based <hi>learning</hi> scenario is not an easy task.
+Advancing further, with end-users probing the system in realistic settings, is
+even harder. Computer <hi>science</hi> research in evaluation faces an immense
+challenge, having to cope with contributions from several conflicting <hi>and</hi>
+controversial research fields. We believe that deep changes must be made in our
+field if we are to advance beyond the CBT (computer-based training) <hi>learning</hi>
+model <hi>and</hi> to build an adequate epistemology for this challenge. The first task
+is to relocate our field by building upon recent results from philosophy,
+psychology, social <hi>sciences</hi>, <hi>and</hi> engineering. In this article we locate
+evaluation in respect to communication studies. Evaluation presupposes a
+definition of goals to be reached, <hi>and</hi> we suggest that it is, by many means, a
+silent communication between teacher <hi>and</hi> student, peers, <hi>and</hi> institutional
+entities. If we accept that evaluation can be viewed as set of invisible rules
+known by nobody, but somehow understood by everybody, we should add
+anthropological inquiries to our research toolkit. The paper is organized
+around some elements of the social communication <hi>and</hi> how they convey new
+insights to evaluation research for computer <hi>and</hi> related scientists. We found
+some technical limitations <hi>and</hi> offer discussions on how we relate to technology
+at same time we establish expectancies <hi>and</hi> perceive others work.
+",17.992798777604225
+11,0704.1338,"True and Apparent Scaling: The Proximity of the Markov-Switching
+  Multifractal Model to Long-Range Dependence","  In this paper, we consider daily financial <hi>data</hi> of a collection of different
+<hi>stock</hi> <hi>market</hi> indices, exchange rates, <hi>and</hi> interest rates, <hi>and</hi> we analyze their
+multi-scaling properties by estimating a simple specification of the
+Markov-switching multifractal model (MSM). In order to see how well the
+estimated models capture the temporal dependence of the <hi>data</hi>, we estimate <hi>and</hi>
+compare the scaling exponents $H(q)$ (for $q = 1, 2$) for both empirical <hi>data</hi>
+<hi>and</hi> simulated <hi>data</hi> of the estimated MSM models. In most cases the multifractal
+model appears to generate `apparent' long memory in agreement with the
+empirical scaling laws.
+",17.48821689474713
+12,0705.0209,Support vector machine for functional data classification,"  In many applications, input <hi>data</hi> are sampled functions taking their values in
+infinite dimensional spaces rather than standard vectors. This fact has complex
+consequences on <hi>data</hi> analysis algorithms that motivate modifications of them.
+In fact most of the traditional <hi>data</hi> analysis tools for regression,
+classification <hi>and</hi> clustering have been adapted to functional inputs under the
+general name of functional <hi>Data</hi> Analysis (FDA). In this paper, we investigate
+the use of Support Vector <hi>Machines</hi> (SVMs) for functional <hi>data</hi> analysis <hi>and</hi> we
+focus on the problem of curves discrimination. SVMs are large margin classifier
+tools based on implicit non linear mappings of the considered <hi>data</hi> into high
+dimensional spaces thanks to kernels. We show how to define simple kernels that
+take into account the unctional nature of the <hi>data</hi> <hi>and</hi> lead to consistent
+classification. Experiments conducted on real world <hi>data</hi> emphasize the benefit
+of taking into account some functional aspects of the problems.
+",16.865357326981524
+13,0704.2865,Classical and quantum randomness and the financial market,"  We analyze complexity of financial (<hi>and</hi> general economic) processes by
+comparing classical <hi>and</hi> quantum-like models for randomness. Our analysis
+implies that it might be that a quantum-like probabilistic description is more
+natural for financial <hi>market</hi> than the classical one. A part of our analysis is
+devoted to study the possibility of application of the quantum probabilistic
+model to agents of financial <hi>market</hi>. We show that, although the direct quantum
+(physical) reduction (based on using the scales of quantum mechanics) is
+meaningless, one may apply so called quantum-like models. In our approach
+quantum-like probabilistic behaviour is a consequence of contextualy of
+statistical <hi>data</hi> in finances (<hi>and</hi> economics in general). However, our
+hypothesis on ""quantumness"" of financial <hi>data</hi> should be tested experimentally
+(as opposed to the conventional description based on the noncontextual
+classical probabilistic approach). We present a new statistical test based on a
+generalization of the well known in quantum physics Bell's inequality.
+",16.62448583228525
+14,0705.2318,"Statistical Mechanics of Nonlinear On-line Learning for Ensemble
+  Teachers","  We analyze the generalization performance of a student in a model composed of
+nonlinear perceptrons: a true teacher, ensemble teachers, <hi>and</hi> the student. We
+calculate the generalization error of the student analytically or numerically
+using statistical mechanics in the framework of on-line <hi>learning</hi>. We treat two
+well-known <hi>learning</hi> rules: Hebbian <hi>learning</hi> <hi>and</hi> perceptron <hi>learning</hi>. As a
+result, it is proven that the nonlinear model shows qualitatively different
+behaviors from the linear model. Moreover, it is clarified that Hebbian
+<hi>learning</hi> <hi>and</hi> perceptron <hi>learning</hi> show qualitatively different behaviors from
+each other. In Hebbian <hi>learning</hi>, we can analytically obtain the solutions. In
+this case, the generalization error monotonically decreases. The steady value
+of the generalization error is independent of the <hi>learning</hi> rate. The larger the
+number of teachers is <hi>and</hi> the more variety the ensemble teachers have, the
+smaller the generalization error is. In perceptron <hi>learning</hi>, we have to
+numerically obtain the solutions. In this case, the dynamical behaviors of the
+generalization error are non-monotonic. The smaller the <hi>learning</hi> rate is, the
+larger the number of teachers is; <hi>and</hi> the more variety the ensemble teachers
+have, the smaller the minimum value of the generalization error is.
+",16.617276064869394
+15,0705.0631,Hybrid Quantum Cloning Machine,"  In this work, we introduce a special kind of quantum cloning <hi>machine</hi> called
+Hybrid quantum cloning <hi>machine</hi>. The introduced Hybrid quantum cloning <hi>machine</hi>
+or transformation is nothing but a combination of pre-existing quantum cloning
+transformations. In this sense it creates its own identity in the field of
+quantum cloners. Hybrid quantum cloning <hi>machine</hi> can be of two types: (i) State
+dependent <hi>and</hi> (ii) State independent or Universal. We study here the above two
+types of Hybrid quantum cloning <hi>machines</hi>. Later we will show that the state
+dependent hybrid quantum-cloning <hi>machine</hi> can be applied on only four input
+states. We will also find in this paper another asymmetric universal quantum
+cloning <hi>machine</hi> constructed from the combination of optimal universal B-H
+quantum cloning <hi>machine</hi> <hi>and</hi> universal anti-cloning <hi>machine</hi>. The fidelities of
+the two outputs are different <hi>and</hi> their values lie in the neighborhood of
+${5/6} $
+",16.555614382199074
+16,0706.1300,The Quantum Black-Scholes Equation,"  Motivated by the work of Segal <hi>and</hi> Segal on the Black-Scholes pricing formula
+in the quantum context, we study a quantum extension of the Black-Scholes
+equation within the context of Hudson-Parthasarathy quantum stochastic
+calculus. Our model includes <hi>stock</hi> <hi>markets</hi> described by quantum Brownian motion
+<hi>and</hi> Poisson process.
+",16.531078722199826
+17,0706.0462,"Financial equilibria in the semimartingale setting: complete markets and
+  markets with withdrawal constraints","  Existence of stochastic financial equilibria giving rise to semimartingale
+asset prices is established under a general class of assumptions. These
+equilibria are expressed in real terms <hi>and</hi> span complete <hi>markets</hi> or <hi>markets</hi>
+with withdrawal constraints.We deal with random endowment density streams which
+admit jumps <hi>and</hi> general time-dependent utility functions on which only
+regularity conditions are imposed. As an integral part of the proof of the main
+result, we establish a novel characterization of semimartingale functions.
+",16.298974822610738
+18,0704.1274,Parametric Learning and Monte Carlo Optimization,"  This paper uncovers <hi>and</hi> explores the close relationship between Monte Carlo
+Optimization of a parametrized integral (MCO), Parametric <hi>machine</hi>-<hi>Learning</hi>
+(PL), <hi>and</hi> `blackbox' or `oracle'-based optimization (BO). We make four
+contributions. First, we prove that MCO is mathematically identical to a broad
+class of PL problems. This identity potentially provides a new application
+domain for all broadly applicable PL techniques: MCO. Second, we introduce
+immediate sampling, a new version of the Probability Collectives (PC) algorithm
+for blackbox optimization. Immediate sampling transforms the original BO
+problem into an MCO problem. Accordingly, by combining these first two
+contributions, we can apply all PL techniques to BO. In our third contribution
+we validate this way of improving BO by demonstrating that cross-validation <hi>and</hi>
+bagging improve immediate sampling. Finally, conventional MC <hi>and</hi> MCO procedures
+ignore the relationship between the sample point locations <hi>and</hi> the associated
+values of the integrand; only the values of the integrand at those locations
+are considered. We demonstrate that one can exploit the sample location
+information using PL techniques, for example by forming a fit of the sample
+locations to the associated values of the integrand. This provides an
+additional way to apply PL techniques to improve MCO.
+",16.06726874922595
+19,0704.0943,"Search for gravitational-wave bursts in LIGO data from the fourth
+  science run","  The fourth <hi>science</hi> run of the LIGO <hi>and</hi> GEO 600 gravitational-wave detectors,
+carried out in early 2005, collected <hi>data</hi> with significantly lower noise than
+previous <hi>science</hi> runs. We report on a search for short-duration
+gravitational-wave bursts with arbitrary waveform in the 64-1600 Hz frequency
+range appearing in all three LIGO interferometers. Signal consistency tests,
+<hi>data</hi> quality cuts, <hi>and</hi> auxiliary-channel vetoes are applied to reduce the rate
+of spurious triggers. No gravitational-wave signals are detected in 15.5 days
+of live observation time; we set a frequentist upper limit of 0.15 per day (at
+90% confidence level) on the rate of bursts with large enough amplitudes to be
+detected reliably. The amplitude sensitivity of the search, characterized using
+Monte Carlo simulations, is several times better than that of previous
+searches. We also provide rough estimates of the distances at which
+representative supernova <hi>and</hi> binary black hole merger signals could be detected
+with 50% efficiency by this analysis.
+",15.790020665274367
+20,0705.0693,Learning to Bluff,"  The act of bluffing confounds game designers to this day. The very nature of
+bluffing is even open for debate, adding further complication to the process of
+creating intelligent virtual players that can bluff, <hi>and</hi> hence play,
+realistically. Through the use of intelligent, <hi>learning</hi> agents, <hi>and</hi> carefully
+designed agent outlooks, an agent can in fact learn to predict its opponents
+reactions based not only on its own cards, but on the actions of those around
+it. With this wider scope of understanding, an agent can in learn to bluff its
+opponents, with the action representing not an illogical action, as bluffing is
+often viewed, but rather as an act of maximising returns through an effective
+statistical optimisation. By using a tee dee lambda <hi>learning</hi> algorithm to
+continuously adapt neural network agent intelligence, agents have been shown to
+be able to learn to bluff without outside prompting, <hi>and</hi> even to learn to call
+each others bluffs in free, competitive play.
+",15.463330614104086
+21,0704.1028,A neural network approach to ordinal regression,"  Ordinal regression is an important type of <hi>learning</hi>, which has properties of
+both classification <hi>and</hi> regression. Here we describe a simple <hi>and</hi> effective
+approach to adapt a traditional neural network to learn ordinal categories. Our
+approach is a generalization of the perceptron method for ordinal regression.
+On several benchmark datasets, our method (NNRank) outperforms a neural network
+classification method. Compared with the ordinal regression methods using
+Gaussian processes <hi>and</hi> support vector <hi>machines</hi>, NNRank achieves comparable
+performance. Moreover, NNRank has the advantages of traditional neural
+networks: <hi>learning</hi> in both online <hi>and</hi> batch modes, handling very large training
+datasets, <hi>and</hi> making rapid predictions. These features make NNRank a useful <hi>and</hi>
+complementary tool for large-scale <hi>data</hi> processing tasks such as information
+retrieval, web page ranking, collaborative filtering, <hi>and</hi> protein ranking in
+Bioinformatics.
+",15.097930719427541
+22,0706.1201,"Developing a Collaborative and Autonomous Training and Learning
+  Environment for Hybrid Wireless Networks","  With larger memory capacities <hi>and</hi> the ability to link into wireless networks,
+more <hi>and</hi> more students uses palmtop <hi>and</hi> handheld computers for <hi>learning</hi>
+activities. However, existing software for Web-based <hi>learning</hi> is not
+well-suited for such mobile devices, both due to constrained user interfaces as
+well as communication effort required. A new generation of applications for the
+<hi>learning</hi> domain that is explicitly designed to work on these kinds of small
+mobile devices has to be developed. For this purpose, we introduce CARLA, a
+cooperative <hi>learning</hi> system that is designed to act in hybrid wireless
+networks. As a cooperative environment, CARLA aims at disseminating teaching
+material, notes, <hi>and</hi> even components of itself through both fixed <hi>and</hi> mobile
+networks to interested nodes. Due to the mobility of nodes, CARLA deals with
+upcoming problems such as network partitions <hi>and</hi> synchronization of teaching
+material, resource dependencies, <hi>and</hi> time constraints.
+",15.084007797263002
+23,0705.2097,A simple algorithm based on fluctuations to play the market,"  In Biology, all motor enzymes operate on the same principle: they trap
+favourable brownian fluctuations in order to generate directed forces <hi>and</hi> to
+move. Whether it is possible or not to copy one such strategy to play the
+<hi>market</hi> was the starting point of our investigations. We found the answer is
+yes. In this paper we describe one such strategy <hi>and</hi> appraise its performance
+with historical <hi>data</hi> from the European Monetary System (EMS), the US Dow Jones,
+the german Dax <hi>and</hi> the french Cac40.
+",14.838516361595456
+24,0705.0982,A New Three-DOF Parallel Mechanism: Milling Machine Applications,"  This paper describes a new parallel kinematic architecture for <hi>machining</hi>
+applications, namely, the orthoglide. This <hi>machine</hi> features three fixed
+parallel linear joints which are mounted orthogonally <hi>and</hi> a mobile platform
+which moves in the Cartesian x-y-z space with fixed orientation. The main
+interest of the orthoglide is that it takes benefit from the advantages of the
+popular PPP serial <hi>machines</hi> (regular Cartesian workspace shape <hi>and</hi> uniform
+performances) as well as from the parallel kinematic arrangement of the links
+(less inertia <hi>and</hi> better dynamic performances), which makes the orthoglide well
+suited to high-speed <hi>machining</hi> applications. Possible extension of the
+orthoglide to 5-axis <hi>machining</hi> is also investigated.
+",14.684417055398594
+25,0705.0113,The Mathematics,"  This is an essay that considering the knowledge structure <hi>and</hi> language of a
+different nature, attempts to build on an explanation of the object of study
+<hi>and</hi> characteristics of the mathematical <hi>science</hi>. We end up with a <hi>learning</hi>
+cycle of mathematics <hi>and</hi> a paradigm for education, namely Learn to structure.
+",14.648193389357147
+26,0705.1757,"Scalability and Optimisation of a Committee of Agents Using Genetic
+  Algorithm","  A population of committees of agents that learn by using neural networks is
+implemented to simulate the <hi>stock</hi> <hi>market</hi>. Each committee of agents, which is
+regarded as a player in a game, is optimised by continually adapting the
+architecture of the agents using genetic algorithms. The committees of agents
+buy <hi>and</hi> sell stocks by following this procedure: (1) obtain the current price
+of stocks; (2) predict the future price of stocks; (3) <hi>and</hi> for a given price
+trade until all the players are mutually satisfied. The trading of stocks is
+conducted by following these rules: (1) if a player expects an increase in
+price then it tries to buy the <hi>stock</hi>; (2) else if it expects a drop in the
+price, it sells the <hi>stock</hi>; (3)<hi>and</hi> the order in which a player participates in
+the game is random. The proposed procedure is implemented to simulate trading
+of three stocks, namely, the Dow Jones, the Nasdaq <hi>and</hi> the S&P 500. A linear
+relationship between the number of players <hi>and</hi> agents versus the computational
+time to run the complete simulation is observed. It is also found that no
+player has a monopolistic advantage.
+",14.540413041625971
+27,0705.3691,"A simple spontaneously active Hebbian learning model: homeostasis of
+  activity and connectivity, and consequences for learning and epileptogenesis","  A spontaneously active neural system that is capable of continual <hi>learning</hi>
+should also be capable of homeostasis of both firing rate <hi>and</hi> connectivity.
+Experimental evidence suggests that both types of homeostasis exist, <hi>and</hi> that
+connectivity is maintained at a state that is optimal for information
+transmission <hi>and</hi> storage. This state is referred to as the critical state. We
+present a simple stochastic computational Hebbian <hi>learning</hi> model that
+incorporates both firing rate <hi>and</hi> critical homeostasis, <hi>and</hi> we explore its
+stability <hi>and</hi> connectivity properties. We also examine the behavior of our
+model with a simulated seizure <hi>and</hi> with simulated acute deafferentation. We
+argue that a neural system that is more highly connected than the critical
+state (i.e., one that is ""supercritical"") is epileptogenic. Based on our
+simulations, we predict that the post-seizural <hi>and</hi> post-deafferentation states
+should be supercritical <hi>and</hi> epileptogenic. Furthermore, interventions that
+boost spontaneous activity should be protective against epileptogenesis.
+",14.486148873291707
+28,0704.1711,"Dynamical Equilibrium, trajectories study in an economical system. The
+  case of the labor market","  The paper deals with the study of labor <hi>market</hi> dynamics, <hi>and</hi> aims to
+characterize its equilibriums <hi>and</hi> possible trajectories. The theoretical
+background is the theory of the segmented labor <hi>market</hi>. The main idea is that
+this theory is well adapted to interpret the observed trajectories, due to the
+heterogeneity of the work situations.
+",14.372166246428293
+29,0705.4312,Learning about a Categorical Latent Variable under Prior Near-Ignorance,"  It is well known that complete prior ignorance is not compatible with
+<hi>learning</hi>, at least in a coherent theory of (epistemic) uncertainty. What is
+less widely known, is that there is a state similar to full ignorance, that
+Walley calls near-ignorance, that permits <hi>learning</hi> to take place. In this paper
+we provide new <hi>and</hi> substantial evidence that also near-ignorance cannot be
+really regarded as a way out of the problem of starting statistical inference
+in conditions of very weak beliefs. The key to this result is focusing on a
+setting characterized by a variable of interest that is latent. We argue that
+such a setting is by far the most common case in practice, <hi>and</hi> we show, for the
+case of categorical latent variables (<hi>and</hi> general manifest variables) that
+there is a sufficient condition that, if satisfied, prevents <hi>learning</hi> to take
+place under prior near-ignorance. This condition is shown to be easily
+satisfied in the most common statistical problems.
+",14.357445569346726
