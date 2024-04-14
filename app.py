@@ -3,8 +3,13 @@ import pandas as pd
 from llm_model import LLMModel
 from search_engine import SearchEngine
 
+DATA_DIR = "./data/"
+DATA_FILES = ["arxiv-metadata-oai-snapshot.json"]
+SPLIT_SIZE_LIMIT = 100
+
 
 search_engine = SearchEngine()
+search_engine.feed_json(DATA_DIR, DATA_FILES, SPLIT_SIZE_LIMIT)
 model = LLMModel()
 
 

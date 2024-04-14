@@ -6,16 +6,13 @@ from datasets import load_dataset
 from vespa.io import VespaResponse, VespaQueryResponse
 
 
-DATA_DIR = "../../"
-DATA_FILES = ["arxiv-metadata-oai-snapshot.json"]
-SPLIT_SIZE_LIMIT = 100
 
 
 class SearchEngine:
     def __init__(self):
         self.set_package()
         self.set_docker()
-        self.set_app()       
+        self.set_app()
 
     def set_package(self):
         self.package = ApplicationPackage(
@@ -82,12 +79,12 @@ class SearchEngine:
         if not response.is_successful():
             print(f"Error when feeding document {id}: {response.get_json()}")
 
-    def feed_json(self, data_files, **kwargs):
+    def feed_json(self, data_dir, data_files, split_size_limit, **kwargs):
         dataset = load_dataset(
             "json",
-            data_dir=DATA_DIR,
+            data_dir=data_dir,
             data_files=data_files,
-            split=f"train[0:{SPLIT_SIZE_LIMIT}]",
+            split=f"train[0:{split_size_limit}]",
         )
         vespa_feed = dataset.map(lambda x: {"id": x["id"], "fields": { "title": x["title"], "body": x["abstract"], "id": x["id"]}})
         self.app.feed_iterable(vespa_feed, schema="doc", namespace="article", callback=self.callback)

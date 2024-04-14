@@ -1,3 +1,5 @@
 .venv
 AuthKey.txt
 /__pycache__/
+data/*
+!data/.gitkeep
