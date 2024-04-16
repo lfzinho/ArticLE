@@ -52,9 +52,9 @@ class SearchEngine:
                     name="fusion",
                     inherits="bm25",
                     inputs=[("query(q)", "tensor<float>(x[384])")],
-                    first_phase="closeness(field, embedding)",
+                    first_phase="closeness(embedding)",
                     global_phase=GlobalPhaseRanking(
-                        expression="reciprocal_rank_fusion(bm25sum, closeness(field, embedding))",
+                        expression="bm25sum + closeness(embedding)",
                         rerank_count=1000
                     )
                 )
@@ -75,7 +75,7 @@ class SearchEngine:
     def set_app(self):
         self.app = self.docker.deploy(application_package=self.package)
 
-    def callback(self, response):
+    def callback(self, response, id):
         if not response.is_successful():
             print(f"Error when feeding document {id}: {response.get_json()}")
 
@@ -105,7 +105,7 @@ class SearchEngine:
             response:VespaQueryResponse = session.query(
                 yql=f"select * from sources * where userQuery() limit {n_hits}",
                 query=query,
-                ranking="bm25",
+                ranking="fusion",
             )
         assert(response.is_successful())
         return self.hits_to_df(response)

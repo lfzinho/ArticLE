@@ -26,13 +26,13 @@ response to the following question:
         return f'''
 We are using a search engine to find information on a
 articles database. 
-The search engine is using the BM25
-algorithm to rank documents.
+The search engine is using a hybrid search with the
+HNSW and BM25 algorithms to rank documents.
 You are given a document with the following title:
 {doc['title']}
 The content of the document is as follows:
 {doc['body']}
-Explain why the search engine returned this document 
+Explain briefly why the search engine returned this document 
 at {idx+1} rank in response to the following question:
 "{question}"
 '''
