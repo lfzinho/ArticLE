@@ -4,6 +4,7 @@ import pandas as pd
 from typing import List
 from llm_model import LLMModel
 from search_engine import SearchEngine
+from fastapi.middleware.cors import CORSMiddleware
 import os
 from dotenv import load_dotenv
 
@@ -13,6 +14,15 @@ api_key = os.getenv("OPENAI_API_KEY")
 
 # Initialize FastAPI app
 app = FastAPI()
+
+# Add CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allows all origins
+    allow_credentials=True,
+    allow_methods=["*"],  # Allows all methods
+    allow_headers=["*"],  # Allows all headers
+)
 
 # Initialize search engine and LLM model
 DATA_DIR = "./data/"
@@ -44,5 +54,4 @@ def read_root():
 
 if __name__ == "__main__":
     import uvicorn
-    # on save reload
     uvicorn.run(app, host="0.0.0.0", port=8000)
