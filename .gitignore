@@ -2,4 +2,7 @@
 AuthKey.txt
 /__pycache__/
 data/*
+app/data/*
 !data/.gitkeep
+.env
+__pycache__

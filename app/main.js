@@ -49,13 +49,6 @@ $(document).ready(function() {
             summary: 'Analyzes the various factors affecting the efficacy of biochar in soil and plant responses.',
             reasoning: 'Included for its extensive review of biochar mechanisms and agricultural impacts.'
         },
-        {
-            title: 'How biochar works, and when it doesn\'t: A review of mechanisms controlling soil and plant responses to biochar',
-            link: '#',
-            snippet: 'We synthesized 20 years of research to explain the interrelated processes that determine soil and plant responses to biochar. The properties of biochar and its effects within agricultural...',
-            summary: 'Analyzes the various factors affecting the efficacy of biochar in soil and plant responses.',
-            reasoning: 'Included for its extensive review of biochar mechanisms and agricultural impacts.'
-        },
     ];
 
     function displayResults(detailType = '') {
@@ -79,15 +72,23 @@ $(document).ready(function() {
         resultsSection.show();
     }
 
+    function markButtonSelected(buttonId) {
+        $('.search-btn').removeClass('selected');
+        $(`#${buttonId}`).addClass('selected');
+    }
+
     $('#show-btn').on('click', function() {
         displayResults();
+        markButtonSelected('show-btn');
     });
 
     $('#explain-btn').on('click', function() {
         displayResults('reasoning');
+        markButtonSelected('explain-btn');
     });
 
     $('#summary-btn').on('click', function() {
         displayResults('summary');
+        markButtonSelected('summary-btn');
     });
 });

@@ -118,6 +118,11 @@ input:focus {
     border: 1px solid #9aa0a6; 
 }
 
+.search-btn.selected {
+    background-color: #1a73e8; /* Change this to the desired selected color */
+    border-color: #1a73e8; /* Ensure the border matches */
+}
+
 .results-section {
     display: none;
     padding: 20px;
