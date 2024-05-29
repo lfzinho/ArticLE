@@ -3,3 +3,4 @@ AuthKey.txt
 /__pycache__/
 data/*
 !data/.gitkeep
+client_secret.json
