@@ -1,16 +1,29 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
-import pandas as pd
-from typing import List
 from llm_model import LLMModel
-from search_engine import SearchEngine
+from search_enginer_cloud import SearchEngine
 from fastapi.middleware.cors import CORSMiddleware
 import os
 from dotenv import load_dotenv
+from pathlib import Path
 
 # Load environment variables from .env file
 load_dotenv()
 api_key = os.getenv("OPENAI_API_KEY")
+endpoint = "https://eb38f856.cc1e1530.z.vespa-app.cloud/"
+application = ""
+
+cert_path = (
+    Path.home()
+    / ".vespa"
+    / "article.hybridsearch.default/data-plane-public-cert.pem"
+)
+key_path = (
+    Path.home()
+    / ".vespa"
+    / "article.hybridsearch.default/data-plane-private-key.pem"
+)
+
 
 # Initialize FastAPI app
 app = FastAPI()
@@ -29,8 +42,7 @@ DATA_DIR = "./data/"
 DATA_FILES = ["arxiv-metadata-oai-snapshot.json"]
 SPLIT_SIZE_LIMIT = 100
 
-search_engine = SearchEngine()
-search_engine.feed_json(DATA_DIR, DATA_FILES, SPLIT_SIZE_LIMIT)
+search_engine = SearchEngine(endpoint, cert_path, key_path)
 model = LLMModel()
 
 class QueryRequest(BaseModel):
