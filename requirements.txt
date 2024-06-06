@@ -1,2 +1,3 @@
+pyvespa
 openai
 python-dotenv
