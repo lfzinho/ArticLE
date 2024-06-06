@@ -1,7 +1,8 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from llm_model import LLMModel
-from search_enginer_cloud import SearchEngine
+from search_engine import SearchEngine
+# from search_engine_cloud import SearchEngine
 from fastapi.middleware.cors import CORSMiddleware
 import os
 from dotenv import load_dotenv
@@ -42,7 +43,14 @@ DATA_DIR = "./data/"
 DATA_FILES = ["arxiv-metadata-oai-snapshot.json"]
 SPLIT_SIZE_LIMIT = 100
 
-search_engine = SearchEngine(endpoint, cert_path, key_path)
+# local vespa
+search_engine = SearchEngine()
+search_engine.feed_json(DATA_DIR, DATA_FILES, SPLIT_SIZE_LIMIT)
+
+# vespa cloud
+# search_engine = SearchEngine(endpoint, cert_path, key_path)
+
+
 model = LLMModel()
 
 class QueryRequest(BaseModel):
@@ -57,7 +65,7 @@ def run_query(request: QueryRequest):
     
     response = model.generate_response(request.query, docs, request.response_type)
     for doc in response:
-        doc['link'] = "#"  # Update with actual link if available
+        doc['link'] = "#"
     return response
 
 @app.get("/")
@@ -67,3 +75,5 @@ def read_root():
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
+
+# python main.py
