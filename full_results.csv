@@ -1,0 +1,1033 @@
+,id,title,body,relevance,query_id
+0,2010.11918,AdapterDrop: On the Efficiency of Adapters in Transformers,"  Massively pre-trained <hi>transformer</hi> <hi>models</hi> are computationally expensive to
+fine-tune, slow for inference, and have large storage requirements. Recent
+approaches tackle these shortcomings by training smaller <hi>models</hi>, dynamically
+reducing the <hi>model</hi> size, and by training light-weight adapters. In this paper,
+we propose AdapterDrop, removing adapters from lower <hi>transformer</hi> layers during
+training and inference, which incorporates concepts from all three <hi>directions</hi>.
+We show that AdapterDrop can dynamically reduce the computational overhead when
+performing inference over multiple tasks simultaneously, with minimal decrease
+in task performances. We further prune adapters from AdapterFusion, which
+improves the inference efficiency while maintaining the task performances
+entirely.
+",29.482678084677303,000001
+1,0905.3998,"Predicate Transformers and Linear Logic, yet another denotational model","  In the refinement calculus, monotonic predicate <hi>transformers</hi> are used to
+<hi>model</hi> specifications for (imperative) programs. Together with a natural notion
+<hi>of</hi> simulation, they form a category enjoying many algebraic properties. We
+build on this structure to make predicate <hi>transformers</hi> into a de notational
+<hi>model</hi> <hi>of</hi> full linear logic: all the logical constructions have a natural
+interpretation in terms <hi>of</hi> predicate <hi>transformers</hi> (i.e. in terms <hi>of</hi>
+specifications). We then interpret proofs <hi>of</hi> a formula by a safety property for
+the corresponding specification.
+",27.054090945792176,000001
+2,1207.3208,Formal Verification of Monad Transformers,"  We present techniques for reasoning about constructor classes that (like the
+monad class) fix polymorphic operations and assert polymorphic axioms. We do
+not require a logic with first-class type constructors, first-class
+polymorphism, or type quantification; instead, we rely on a domain-theoretic
+<hi>model</hi> <hi>of</hi> the type system in a universal domain to provide these features.
+  These ideas are implemented in the Tycon library for the Isabelle theorem
+prover, which builds on the HOLCF library <hi>of</hi> domain theory. The Tycon library
+provides various axiomatic type constructor classes, including functors and
+monads. It also provides automation for instantiating those classes, and for
+defining further subclasses.
+  We use the Tycon library to formalize three Haskell monad <hi>transformers</hi>: the
+error <hi>transformer</hi>, the writer <hi>transformer</hi>, and the resumption <hi>transformer</hi>. The
+error and writer <hi>transformers</hi> do not universally preserve the monad laws;
+however, we establish datatype invariants for each, showing that they are valid
+monads when viewed as abstract datatypes.
+",26.893451778476553,000001
+3,1307.1149,"Solar Activity and Transformer Failures in the Greek National Electric
+  Grid","  We study <hi>both</hi> the short term and long term effects <hi>of</hi> solar activity on the
+large <hi>transformers</hi> (150kV and 400kV) <hi>of</hi> the Greek national electric grid. We
+use data analysis and various analytic and statistical methods and <hi>models</hi>.
+Contrary to the common belief in PPC Greece, we see that there are considerable
+<hi>both</hi> short term (immediate) and long term effects <hi>of</hi> solar activity onto large
+<hi>transformers</hi> in a mid-latitude country (latitude approx. 35 - 41 degrees North)
+like Greece. Our results can be summarized as follows: For the short term
+effects: During 1989-2010 there were 43 stormy days (namely days with for
+example Ap larger or equal to 100) and we had 19 failures occurring during a
+stormy day plus or minus 3 days and 51 failures occurring during a stormy day
+plus or minus 7 days. All these failures can be directly related to
+Geomagnetically Induced Currents (GICs). Explicit cases are presented. For the
+long term effects we have two main results: The annual <hi>transformer</hi> failure
+number for the period <hi>of</hi> study 1989-2010 follows the solar activity pattern (11
+year periodicity, bell-shaped graph). Yet the maximum number <hi>of</hi> <hi>transformer</hi>
+failures occur 3-4 years after the maximum <hi>of</hi> solar activity. There is
+statistical correlation between solar activity expressed using various newly
+defined long term solar activity indices and the annual number <hi>of</hi> <hi>transformer</hi>
+failures. These new long term solar activity indices were defined using <hi>both</hi>
+local (from geomagnetic stations in Greece) and global (planetary averages)
+geomagnetic data. Applying <hi>both</hi> linear and non-linear statistical regression we
+compute the regression equations and the corresponding coefficients <hi>of</hi>
+determination.
+",25.520128335507675,000001
+4,2205.13249,DT-SV: A Transformer-based Time-domain Approach for Speaker Verification,"  Speaker verification (SV) aims to determine whether the speaker's identity <hi>of</hi>
+a test utterance is the same as the reference speech. In the past few years,
+extracting speaker embeddings using deep neural networks for SV systems has
+gone mainstream. Recently, different attention mechanisms and <hi>Transformer</hi>
+networks have been explored widely in SV fields. However, utilizing the
+original <hi>Transformer</hi> in SV directly may have frame-level information waste on
+output features, which could lead to restrictions on capacity and
+discrimination <hi>of</hi> speaker embeddings. Therefore, we propose an approach to
+derive utterance-level speaker embeddings via a <hi>Transformer</hi> architecture that
+uses a novel loss function named diffluence loss to integrate the feature
+information <hi>of</hi> different <hi>Transformer</hi> layers. Therein, the diffluence loss aims
+to aggregate frame-level features into an utterance-level representation, and
+it could be integrated into the <hi>Transformer</hi> expediently. Besides, we also
+introduce a learnable mel-fbank energy feature extractor named time-domain
+feature extractor that computes the mel-fbank features more precisely and
+efficiently than the standard mel-fbank extractor. Combining Diffluence loss
+and Time-domain feature extractor, we propose a novel <hi>Transformer</hi>-based
+time-domain SV <hi>model</hi> (DT-SV) with faster training speed and higher accuracy.
+Experiments indicate that our proposed <hi>model</hi> can achieve better performance in
+comparison with other <hi>models</hi>.
+",24.716539236316827,000001
+5,1107.2684,Coils and transformers - often used but seldomly explained correctly,"  The devices coil and <hi>transformer</hi> are subjects <hi>of</hi> interest in numerous
+schoolbooks, in introductory scientific textbooks <hi>of</hi> physics and engineering,
+and in laboratory courses at universities. Many descriptions, however, draw a
+somewhat distorted picture <hi>of</hi> the underlying physical mechanisms and provide
+half-knowledge or even clear misconceptions that should not be left uncommented
+and are therefore studied in detail:
+  (1) Primary and secondary voltage at a <hi>transformer</hi> have a different sign.
+  (2) Electromagnetic induction is the only mechanism <hi>of</hi> importance for coils
+and <hi>transformers</hi>.
+  (3) The terminal voltage at coils and <hi>transformers</hi> is compensated by the
+so-called ""induced voltage"" (emf), which explains why Kirchhoff's voltage law
+also applies to coils and <hi>transformers</hi>.
+  (4) The cores <hi>of</hi> coils and <hi>transformers</hi> are used for their ability to store
+energy. Energy is transported from the primary to the secondary coil within the
+magnetic core.
+  (5) The stray magnetic and electric fields are sencondary effects not having
+a major effect on energy transport.
+  (6) The higher the load current, the easier a <hi>transformer</hi> goes into
+saturation.
+  (7) The higher the number <hi>of</hi> turns at the primary coil, the larger the
+magnetic flux in the core.
+  (8) <hi>Transformers</hi> with cores having an air gap have a lower coupling factor,
+because the stray inductivity increases.
+  In the paper, the most important characteristics <hi>of</hi> coil and <hi>transformers</hi> are
+derived directly from Maxwell's equation for idealised conditions, and
+subsequently, the different misconceptions are discussed and corrected.
+",24.478527782280707,000001
+6,2004.13138,"Investigating the Effectiveness of Representations Based on Pretrained
+  Transformer-based Language Models in Active Learning for Labelling Text
+  Datasets","  Active learning has been shown to be an effective way to alleviate some <hi>of</hi>
+the effort required in utilising large collections <hi>of</hi> unlabelled data for
+machine learning tasks without needing to fully label them. The representation
+mechanism used to <hi>represent</hi> text documents when performing active learning,
+however, has a significant influence on how effective the process will be.
+While simple vector representations such as bag-<hi>of</hi>-words and embedding-based
+representations based on techniques such as word2vec have been shown to be an
+effective way to <hi>represent</hi> documents during active learning, the emergence <hi>of</hi>
+representation mechanisms based on the pre-trained <hi>transformer</hi>-based neural
+network <hi>models</hi> popular in natural language processing research (e.g. BERT)
+offer a promising, and as yet not fully explored, alternative. This paper
+describes a comprehensive evaluation <hi>of</hi> the effectiveness <hi>of</hi> representations
+based on pre-trained <hi>transformer</hi>-based language <hi>models</hi> for active learning.
+This evaluation shows that <hi>transformer</hi>-based <hi>models</hi>, especially BERT-like
+<hi>models</hi>, that have not yet been widely used in active learning, achieve a
+significant improvement over more commonly used vector representations like
+bag-<hi>of</hi>-words or other classical word embeddings like word2vec. This paper also
+investigates the effectiveness <hi>of</hi> representations based on variants <hi>of</hi> BERT
+such as Roberta, Albert as well as comparing the effectiveness <hi>of</hi> the [CLS]
+token representation and the aggregated representation that can be generated
+using BERT-like <hi>models</hi>. Finally, we propose an approach Adaptive Tuning Active
+Learning. Our experiments show that the limited label information acquired in
+active learning can not only be used for training a classifier but can also
+adaptively improve the embeddings generated by the BERT-like language <hi>models</hi> as
+well.
+",24.37972086018777,000001
+7,0809.2348,The absoption refrigerator as a thermal transformer,"  The absorption refrigerator can be considered a thermal <hi>transformer</hi>, i.e. a
+device that is analogous to the electric <hi>transformer</hi>. The analogy is based on a
+correspondence between the extensive quantities entropy and electric charge and
+that <hi>of</hi> the intensive variables temperature and electric potential.
+",24.202045824042226,000001
+8,0908.2901,"Prediction of remaining life of power transformers based on left
+  truncated and right censored lifetime data","  Prediction <hi>of</hi> the remaining life <hi>of</hi> high-voltage power <hi>transformers</hi> is an
+important issue for energy companies because <hi>of</hi> the need for planning
+maintenance and capital expenditures. Lifetime data for such <hi>transformers</hi> are
+complicated because <hi>transformer</hi> lifetimes can extend over many decades and
+<hi>transformer</hi> designs and manufacturing practices have evolved. We were asked to
+develop statistically-based predictions for the lifetimes <hi>of</hi> an energy
+company's fleet <hi>of</hi> high-voltage transmission and distribution <hi>transformers</hi>. The
+company's data records begin in 1980, providing information on installation and
+failure dates <hi>of</hi> <hi>transformers</hi>. Although the dataset contains many units that
+were installed before 1980, there is no information about units that were
+installed and failed before 1980. Thus, the data are left truncated and right
+censored. We use a parametric lifetime <hi>model</hi> to describe the lifetime
+distribution <hi>of</hi> individual <hi>transformers</hi>. We develop a statistical procedure,
+based on age-adjusted life distributions, for computing a prediction interval
+for remaining life for individual <hi>transformers</hi> now in service. We then extend
+these ideas to provide predictions and prediction intervals for the cumulative
+number <hi>of</hi> failures, over a range <hi>of</hi> time, for the overall fleet <hi>of</hi>
+<hi>transformers</hi>.
+",24.173763803977376,000001
+9,1202.5539,Register Allocation By Model Transformer Semantics,"  Register allocation has long been formulated as a graph coloring problem,
+coloring the conflict graph with physical registers. Such a formulation does
+not fully capture the goal <hi>of</hi> the allocation, which is to minimize the traffic
+between registers and memory. Linear scan has been proposed as an alternative
+to graph coloring, but in essence, it can be viewed as a greedy algorithm for
+graph coloring: coloring the vertices not in the order <hi>of</hi> their degrees, but in
+the order <hi>of</hi> their occurence in the program. Thus it suffers from almost the
+same constraints as graph coloring. In this article, I propose a new method <hi>of</hi>
+register allocation based on the ideas <hi>of</hi> <hi>model</hi> <hi>transformer</hi> semantics (MTS) and
+static cache replacement (SCR). <hi>Model</hi> <hi>transformer</hi> semantics captures the
+semantics <hi>of</hi> registers and the stack. Static cache replacement relaxes the
+assumptions made by graph coloring and linear scan, aiming directly at reducing
+register-memory traffic. The method explores a much larger solution space than
+that <hi>of</hi> graph coloring and linear scan, thus providing more opportunities <hi>of</hi>
+optimization. It seamlessly performs live range splitting, an optimization
+found in extensions to graph coloring and linear scan. Also, it simplifies the
+compiler, and its semantics-based approach provides possibilities <hi>of</hi>
+simplifying the formal verification <hi>of</hi> compilers.
+",23.677295724890964,000001
+10,2002.10957,"MiniLM: Deep Self-Attention Distillation for Task-Agnostic Compression
+  of Pre-Trained Transformers","  Pre-trained language models (e.g., BERT (Devlin et al., 2018) and its
+variants) have achieved remarkable success in varieties <hi>of</hi> NLP tasks. However,
+these models usually consist <hi>of</hi> hundreds <hi>of</hi> millions <hi>of</hi> <hi>parameters</hi> which brings
+challenges for fine-tuning and online serving in real-life applications due to
+latency and capacity constraints. In this work, we present a simple and
+effective approach to compress large <hi>Transformer</hi> (Vaswani et al., 2017) based
+pre-trained models, termed as deep self-attention distillation. The small model
+(<hi>student</hi>) is trained by deeply mimicking the self-attention module, which plays
+a vital role in <hi>Transformer</hi> networks, <hi>of</hi> the large model (<hi>teacher</hi>).
+Specifically, we propose distilling the self-attention module <hi>of</hi> the last
+<hi>Transformer</hi> layer <hi>of</hi> the <hi>teacher</hi>, which is effective and flexible for the
+<hi>student</hi>. Furthermore, we introduce the scaled dot-product between values in the
+self-attention module as the new deep self-attention knowledge, in addition to
+the attention distributions (i.e., the scaled dot-product <hi>of</hi> queries and keys)
+that have been used in existing works. Moreover, we show that introducing a
+<hi>teacher</hi> assistant (Mirzadeh et al., 2019) also helps the distillation <hi>of</hi> large
+pre-trained <hi>Transformer</hi> models. Experimental results demonstrate that our
+monolingual model outperforms state-<hi>of</hi>-the-art baselines in different <hi>parameter</hi>
+size <hi>of</hi> <hi>student</hi> models. In particular, it retains more than 99% accuracy on
+SQuAD 2.0 and several GLUE benchmark tasks using 50% <hi>of</hi> the <hi>Transformer</hi>
+<hi>parameters</hi> and computations <hi>of</hi> the <hi>teacher</hi> model. We also obtain competitive
+results in applying deep self-attention distillation to multilingual
+pre-trained models.
+",43.27872776723752,000002
+11,0805.1480,"On-line Learning of an Unlearnable True Teacher through Mobile Ensemble
+  Teachers","  On-line learning <hi>of</hi> a hierarchical learning model is studied by a <hi>method</hi> from
+statistical mechanics. In our model a <hi>student</hi> <hi>of</hi> a simple perceptron learns
+from not a true <hi>teacher</hi> directly, but ensemble <hi>teachers</hi> who learn from the true
+<hi>teacher</hi> with a perceptron learning rule. Since the true <hi>teacher</hi> and the
+ensemble <hi>teachers</hi> are expressed as non-monotonic perceptron and simple ones,
+respectively, the ensemble <hi>teachers</hi> go around the unlearnable true <hi>teacher</hi> with
+the distance between them fixed in an asymptotic steady state. The
+generalization performance <hi>of</hi> the <hi>student</hi> is shown to exceed that <hi>of</hi> the
+ensemble <hi>teachers</hi> in a transient state, as was shown in similar
+ensemble-<hi>teachers</hi> models. Further, it is found that moving the ensemble
+<hi>teachers</hi> even in the steady state, in contrast to the fixed ensemble <hi>teachers</hi>,
+is efficient for the performance <hi>of</hi> the <hi>student</hi>.
+",39.817125078575614,000002
+12,0906.5461,Can a student learn optimally from two different teachers?,"  We explore the effects <hi>of</hi> over-specificity in learning algorithms by
+investigating the behavior <hi>of</hi> a <hi>student</hi>, suited to learn optimally from a
+<hi>teacher</hi> $\mathbf{B}$, learning from a <hi>teacher</hi> $\mathbf{B}'\neq\mathbf{B}$. We
+only considered the supervised, on-line learning scenario with <hi>teachers</hi>
+selected from a particular family. We found that, in the general case, the
+application <hi>of</hi> the optimal algorithm to the wrong <hi>teacher</hi> produces a residual
+generalization error, even if the right <hi>teacher</hi> is harder. By imposing mild
+conditions to the learning algorithm form we obtained an approximation for the
+residual generalization error. Simulations carried in finite networks validate
+the estimate found.
+",35.52357009010953,000002
+13,1108.2167,Missing data in value-added modeling of teacher effects,"  The increasing availability <hi>of</hi> longitudinal <hi>student</hi> achievement data has
+heightened interest among researchers, educators and policy makers in using
+these data to evaluate educational inputs, as well as for school and possibly
+<hi>teacher</hi> accountability. Researchers have developed elaborate ""value-added
+models"" <hi>of</hi> these longitudinal data to estimate the effects <hi>of</hi> educational
+inputs (e.g., <hi>teachers</hi> or schools) on <hi>student</hi> achievement while using prior
+achievement to adjust for nonrandom assignment <hi>of</hi> <hi>students</hi> to schools and
+classes. A challenge to such modeling efforts is the extensive <hi>numbers</hi> <hi>of</hi>
+<hi>students</hi> with incomplete records and the tendency for those <hi>students</hi> to be
+lower achieving. These conditions create the potential for results to be
+sensitive to violations <hi>of</hi> the assumption that data are missing at random,
+which is commonly used when estimating model <hi>parameters</hi>. The current study
+extends recent value-added modeling approaches for longitudinal <hi>student</hi>
+achievement data Lockwood et al. [J. Educ. Behav. Statist. 32 (2007) 125--150]
+to allow data to be missing not at random via random effects selection and
+pattern mixture models, and applies those <hi>methods</hi> to data from a large urban
+school district to estimate effects <hi>of</hi> elementary school mathematics <hi>teachers</hi>.
+We find that allowing the data to be missing not at random has little impact on
+estimated <hi>teacher</hi> effects. The robustness <hi>of</hi> estimated <hi>teacher</hi> effects to the
+missing data assumptions appears to result from both the relatively small
+impact <hi>of</hi> model specification on estimated <hi>student</hi> effects compared with the
+large variability in <hi>teacher</hi> effects and the downweighting <hi>of</hi> scores from
+<hi>students</hi> with incomplete data.
+",35.016854142175,000002
+14,1207.0393,"Pseudo-finite hard instances for a student-teacher game with a
+  Nisan-Wigderson generator","  For an NP intersect coNP function g <hi>of</hi> the Nisan-Wigderson type and a string
+b outside its range we consider a two player game on a common input a to the
+function. One player, a computationally limited <hi>Student</hi>, tries to find a bit <hi>of</hi>
+g(a) that differs from the corresponding bit <hi>of</hi> b. He can query a
+computationally unlimited <hi>Teacher</hi> for the witnesses <hi>of</hi> the values <hi>of</hi> constantly
+many bits <hi>of</hi> g(a). The <hi>Student</hi> computes the queries from a and from <hi>Teacher</hi>'s
+answers to his previous queries. It was proved by Krajicek (2011) that if g is
+based on a hard bit <hi>of</hi> a one-way permutation then no <hi>Student</hi> computed by a
+polynomial size circuit can succeed on all a. In this paper we give a lower
+bound on the <hi>number</hi> <hi>of</hi> inputs a any such <hi>Student</hi> must fail on. Using that we
+show that there is a pseudo-finite set <hi>of</hi> hard instances on which all uniform
+<hi>students</hi> must fail. The hard-core set is defined in a non-standard model <hi>of</hi>
+true arithmetic and has applications in a forcing construction relevant to
+proof complexity.
+",33.849194832420054,000002
+15,0705.2318,"Statistical Mechanics of Nonlinear On-line Learning for Ensemble
+  Teachers","  We analyze the generalization performance <hi>of</hi> a <hi>student</hi> in a model composed <hi>of</hi>
+nonlinear perceptrons: a true <hi>teacher</hi>, ensemble <hi>teachers</hi>, and the <hi>student</hi>. We
+calculate the generalization error <hi>of</hi> the <hi>student</hi> analytically or numerically
+using statistical mechanics in the framework <hi>of</hi> on-line learning. We treat two
+well-known learning rules: Hebbian learning and perceptron learning. As a
+result, it is proven that the nonlinear model shows qualitatively different
+behaviors from the linear model. Moreover, it is clarified that Hebbian
+learning and perceptron learning show qualitatively different behaviors from
+each other. In Hebbian learning, we can analytically obtain the solutions. In
+this case, the generalization error monotonically decreases. The steady value
+<hi>of</hi> the generalization error is independent <hi>of</hi> the learning rate. The larger the
+<hi>number</hi> <hi>of</hi> <hi>teachers</hi> is and the more variety the ensemble <hi>teachers</hi> have, the
+smaller the generalization error is. In perceptron learning, we have to
+numerically obtain the solutions. In this case, the dynamical behaviors <hi>of</hi> the
+generalization error are non-monotonic. The smaller the learning rate is, the
+larger the <hi>number</hi> <hi>of</hi> <hi>teachers</hi> is; and the more variety the ensemble <hi>teachers</hi>
+have, the smaller the minimum value <hi>of</hi> the generalization error is.
+",33.067393091015504,000002
+16,1212.1042,"Attempts of Transforming Teacher Practice Through Professional
+  Development","  A difficult challenge in physics education is to design professional
+development programs for <hi>teachers</hi>, which can lead to fundamental changes in
+their practise. We report all activities for physics <hi>teachers</hi> in the context <hi>of</hi>
+the National Plan for Scientific Degrees in Southern Tuscany. Research and
+practice have shown that physics teaching in school is inadequate. The main
+consequences are limited achievements in school, decrease <hi>of</hi> <hi>students</hi>'
+interests in learning physics and decrease <hi>of</hi> enrolments in physics in many
+countries. In recent years, the decline in enrolments was faced up with the
+launch <hi>of</hi> a wide national project addressed to secondary school <hi>students</hi> and
+<hi>teachers</hi>. The active involvement <hi>of</hi> <hi>teachers</hi> in the design <hi>of</hi> laboratories was
+found to be essential for obtaining actions which were not transitory and
+entered permanently in classroom practice. We describe some advanced courses in
+Physics and Mathematics Education realized few years ago and courses designed
+for a Master in Physics Educational Innovation and Orienting performed jointly
+by many Italian universities. Other activities are less formal but equally
+relevant, such as the active involvement <hi>of</hi> expert, young and in training
+<hi>teachers</hi> in designing and implementation <hi>of</hi> laboratory activities for a summer
+school <hi>of</hi> physics. Recently, we developed a workshop for <hi>teachers</hi> <hi>of</hi> physics
+and mathematics on modelling. which continued in an updating course for
+<hi>teachers</hi> in which selected topics, named in the same way in both disciplines,
+were discussed in order to design interdisciplinary learning paths. The purpose
+is to clarify these topics by using specific tools from physics and mathematics
+and to outline the similarities and the differences in both contexts. We
+describe <hi>teacher</hi> reactions and the more significant difficulties we
+encountered. Finally, we discuss which kind <hi>of</hi> activity seems more effective.
+",31.626977887010263,000002
+17,1211.6340,"An Approach of Improving Students Academic Performance by using k means
+  clustering algorithm and Decision tree","  Improving <hi>students</hi> academic performance is not an easy task for the academic
+community <hi>of</hi> higher learning. The academic performance <hi>of</hi> engineering and
+science <hi>students</hi> during their first year at university is a turning point in
+their educational path and usually encroaches on their General Point
+Average,GPA in a decisive manner. The <hi>students</hi> evaluation factors like class
+quizzes mid and final exam assignment lab work are studied. It is recommended
+that all these correlated information should be conveyed to the class <hi>teacher</hi>
+before the conduction <hi>of</hi> final exam. This study will help the <hi>teachers</hi> to
+<hi>reduce</hi> the drop out ratio to a significant level and improve the performance <hi>of</hi>
+<hi>students</hi>. In this paper, we present a hybrid procedure based on Decision Tree
+<hi>of</hi> Data mining <hi>method</hi> and Data Clustering that enables academicians to predict
+<hi>students</hi> GPA and based on that instructor can take necessary step to improve
+<hi>student</hi> academic performance.
+",31.331959849137743,000002
+18,1206.4261,"Fostering Student Enrollment in Basic Sciences: the Case of Southern
+  Tuscany","  In recent decades it has been detected in Italy a decrease in enrollment in
+basic sciences, i.e. Mathematics, Physics and Chemistry. The increase in
+specific orientation is strategically crucial to achieve the goal <hi>of</hi>
+maintaining and increasing the <hi>number</hi> <hi>of</hi> motivated and capable <hi>students</hi> who
+enroll in these courses. With the purpose <hi>of</hi> increasing scientific vocations,
+workshops were organized in high schools and <hi>teachers</hi> involved in planning and
+implementation <hi>of</hi> laboratories, conferences for scientific outreach, thematic
+exhibitions, guided tours <hi>of</hi> research laboratories, summer's schools for
+<hi>students</hi> and courses for <hi>teachers</hi> were realized for developing a cultural
+enhancement in teaching basic sciences. Particularly significant is the case <hi>of</hi>
+activities organized by the Department <hi>of</hi> Physics <hi>of</hi> the University <hi>of</hi> Siena
+for <hi>students</hi> and <hi>teachers</hi> in Southern Tuscany. The <hi>methods</hi> used in cultural
+enhancement <hi>of</hi> <hi>teachers</hi> and activities designed to support schools with limited
+laboratory facilities, together with stimulating activities for motivated
+<hi>students</hi> are allowed to take root for some good practices in physics teaching
+and orientation to scientific degrees. Beyond describing the main activities
+for orientation to Physics, activities done in partnership with chemists,
+biologists and geologists are reported, as well as an activity in which the
+Departments <hi>of</hi> Mathematical Sciences and Physics are both involved in looking
+for introducing new interdisciplinary methodologies to increase <hi>students</hi>'
+understanding in high school <hi>of</hi> some selected topics in which both disciplines
+give a contribution in the construction <hi>of</hi> important and mutually reinforcing
+basic concepts.
+",30.544935279494226,000002
+19,0805.0425,Effect of Slow Switching in On-line Learning for Ensemble Teachers,"  We have analyzed the generalization performance <hi>of</hi> a <hi>student</hi> which slowly
+switches ensemble <hi>teachers</hi>. By calculating the generalization error
+analytically using statistical mechanics in the framework <hi>of</hi> on-line learning,
+we show that the dynamical behaviors <hi>of</hi> generalization error have the
+periodicity that is synchronized with the switching period and the behaviors
+differ with the <hi>number</hi> <hi>of</hi> ensemble <hi>teachers</hi>. Furthermore, we show that the
+smaller the switching period is, the larger the difference is.
+",30.2770366149202,000002
+20,0805.4369,A semantic space for modeling children's semantic memory,"  The goal of this paper is to present <hi>a</hi> <hi>model</hi> of children's <hi>semantic</hi> memory,
+which is based on <hi>a</hi> corpus reproducing the kinds of texts children are exposed
+to. After presenting the literature in the development of the <hi>semantic</hi> memory,
+<hi>a</hi> preliminary French corpus of 3.2 million words is described. <hi>Similarities</hi> in
+the resulting <hi>semantic</hi> space are compared to human data on four tests:
+association norms, vocabulary test, <hi>semantic</hi> judgments and memory tasks. <hi>A</hi>
+second corpus is described, which is composed of subcorpora corresponding to
+various ages. This stratified corpus is intended as <hi>a</hi> basis <hi>for</hi> developmental
+studies. Finally, two applications of these <hi>models</hi> of <hi>semantic</hi> memory are
+presented: the first one aims at tracing the development of <hi>semantic</hi>
+<hi>similarities</hi> paragraph by paragraph; the second one describes an implementation
+of <hi>a</hi> <hi>model</hi> of text comprehension derived from the Construction-integration
+<hi>model</hi> (Kintsch, 1988, 1998) and based on such <hi>models</hi> of <hi>semantic</hi> memory.
+",31.51474461693654,000003
+21,0804.0143,Effects of High-Order Co-occurrences on Word Semantic Similarities,"  <hi>A</hi> computational <hi>model</hi> of the construction of word meaning through exposure to
+texts is built in order to simulate the effects of co-occurrence values on word
+<hi>semantic</hi> <hi>similarities</hi>, paragraph by paragraph. <hi>Semantic</hi> <hi>similarity</hi> is here
+viewed as association. It turns out that the <hi>similarity</hi> between two words W1
+and W2 strongly increases with <hi>a</hi> co-occurrence, decreases with the occurrence
+of W1 without W2 or W2 without W1, and slightly increases with high-order
+co-occurrences. Therefore, operationalizing <hi>similarity</hi> as <hi>a</hi> frequency of
+co-occurrence probably introduces <hi>a</hi> bias: first, there are cases in which there
+is <hi>similarity</hi> without co-occurrence and, second, the frequency of co-occurrence
+overestimates <hi>similarity</hi>.
+",30.86488368461282,000003
+22,1010.2345,"Using Context Dependent Semantic Similarity to Browse Information
+  Resources: an Application for the Industrial Design","  This paper deals with the <hi>semantic</hi> interpretation of information resources
+(e.g., images, videos, 3D <hi>models</hi>). We present <hi>a</hi> case study of an approach based
+on <hi>semantic</hi> and context dependent <hi>similarity</hi> applied to the industrial design.
+Different application contexts are considered and <hi>modelled</hi> to browse <hi>a</hi>
+repository of 3D digital objects according to different perspectives. The paper
+briefly summarises the basic concepts behind the <hi>semantic</hi> <hi>similarity</hi> approach
+and illustrates its application and results.
+",30.34818475607758,000003
+23,1004.5370,Self-Taught Hashing for Fast Similarity Search,"  The ability of <hi>fast</hi> <hi>similarity</hi> search at large scale is of great importance
+to many Information Retrieval (IR) applications. <hi>A</hi> promising way to accelerate
+<hi>similarity</hi> search is <hi>semantic</hi> hashing which designs compact binary codes <hi>for</hi> <hi>a</hi>
+large number of documents so that <hi>semantically</hi> similar documents are mapped to
+similar codes (within <hi>a</hi> short Hamming distance). Although some recently
+proposed techniques are able to generate high-quality codes <hi>for</hi> documents known
+in advance, obtaining the codes <hi>for</hi> previously unseen documents remains to be <hi>a</hi>
+very challenging problem. In this paper, we emphasise this issue and propose <hi>a</hi>
+novel Self-Taught Hashing (STH) approach to <hi>semantic</hi> hashing: we first find the
+optimal $l$-bit binary codes <hi>for</hi> all documents in the given corpus via
+unsupervised learning, and then train $l$ classifiers via supervised learning
+to predict the $l$-bit code <hi>for</hi> any query document unseen before. Our
+experiments on three real-world text datasets show that the proposed approach
+using binarised Laplacian Eigenmap (LapEig) and linear Support Vector Machine
+(SVM) outperforms state-of-the-art techniques significantly.
+",30.094068103434573,000003
+24,1105.1406,"Comparison Latent Semantic and WordNet Approach for Semantic Similarity
+  Calculation","  Information exchange among many sources in Internet is more autonomous,
+dynamic and free. The situation drive difference view of concepts among
+sources. <hi>For</hi> example, word 'bank' has meaning as economic institution <hi>for</hi>
+economy domain, but <hi>for</hi> ecology domain it will be defined as slope of river or
+lake. In this aper, we will evaluate latent <hi>semantic</hi> and WordNet approach to
+calculate <hi>semantic</hi> <hi>similarity</hi>. The evaluation will be run <hi>for</hi> some concepts
+from different domain with reference by expert or human. Result of the
+evaluation can provide <hi>a</hi> contribution <hi>for</hi> mapping of concept, query rewriting,
+interoperability, etc.
+",29.56110699608,000003
+25,0911.5043,A Semantic Similarity Measure for Expressive Description Logics,"  <hi>A</hi> totally <hi>semantic</hi> measure is presented which is able to calculate <hi>a</hi>
+<hi>similarity</hi> value between concept descriptions and also between concept
+description and individual or between individuals expressed in an expressive
+description logic. It is applicable on symbolic descriptions although it uses <hi>a</hi>
+numeric approach <hi>for</hi> the calculus. Considering that Description Logics stand as
+the theoretic framework <hi>for</hi> the ontological knowledge representation and
+reasoning, the proposed measure can be effectively used <hi>for</hi> agglomerative and
+divisional clustering task applied to the <hi>semantic</hi> web domain.
+",29.030258941149743,000003
+26,0805.2045,"Semantic Analysis of Tag Similarity Measures in Collaborative Tagging
+  Systems","  Social bookmarking systems allow users to organise collections of resources
+on the Web in <hi>a</hi> collaborative fashion. The increasing popularity of these
+systems as well as first insights into their emergent <hi>semantics</hi> have made them
+relevant to disciplines like knowledge extraction and ontology learning. The
+problem of devising methods to measure the <hi>semantic</hi> relatedness between tags
+and characterizing it <hi>semantically</hi> is still largely open. Here we analyze three
+measures of tag relatedness: tag co-occurrence, cosine <hi>similarity</hi> of
+co-occurrence distributions, and FolkRank, an adaptation of the PageRank
+algorithm to folksonomies. Each measure is computed on tags from <hi>a</hi> large-scale
+dataset crawled from the social bookmarking system del.icio.us. To provide <hi>a</hi>
+<hi>semantic</hi> grounding of our findings, <hi>a</hi> connection to WordNet (<hi>a</hi> <hi>semantic</hi> lexicon
+<hi>for</hi> the English language) is established by mapping tags into synonym sets of
+WordNet, and applying there well-known metrics of <hi>semantic</hi> <hi>similarity</hi>. Our
+results clearly expose different characteristics of the selected measures of
+relatedness, making them applicable to different subtasks of knowledge
+extraction such as synonym detection or discovery of concept hierarchies.
+",28.36441147004134,000003
+27,1305.4858,"Thresholding of Semantic Similarity Networks using a Spectral Graph
+  Based Technique","  <hi>Semantic</hi> <hi>similarity</hi> measures (SSMs) refer to <hi>a</hi> set of algorithms used to
+quantify the <hi>similarity</hi> of two or more terms belonging to the same ontology.
+Ontology terms may be associated to concepts, <hi>for</hi> instance in computational
+biology gene and proteins are associated with terms of biological ontologies.
+Thus, SSMs may be used to quantify the <hi>similarity</hi> of genes and proteins
+starting from the comparison of the associated annotations. SSMs have been
+recently used to compare genes and proteins even on <hi>a</hi> system level scale. More
+recently some works have focused on the building and analysis of <hi>Semantic</hi>
+<hi>Similarity</hi> Networks (SSNs) i.e. weighted networks in which nodes represents
+genes or proteins while weighted edges represent the <hi>semantic</hi> <hi>similarity</hi> score
+among them. SSNs are quasi-complete networks, thus their analysis presents
+different challenges that should be addressed. <hi>For</hi> instance, the need <hi>for</hi> the
+introduction of reliable thresholds <hi>for</hi> the elimination of meaningless edges
+arises. Nevertheless, the use of global thresholding methods may produce the
+elimination of meaningful nodes, while the use of local thresholds may
+introduce biases. <hi>For</hi> these aims, we introduce <hi>a</hi> novel technique, based on
+spectral graph considerations and on <hi>a</hi> mixed global-local focus. The
+effectiveness of our technique is demonstrated by using markov clustering <hi>for</hi>
+the extraction of biological modules. We applied clustering to simplified
+networks demonstrating <hi>a</hi> considerable improvements with respect to the original
+ones.
+",28.14461302249571,000003
+28,1111.1570,Semantic Grounding Strategies for Tagbased Recommender Systems,"  Recommender systems usually operate on <hi>similarities</hi> between recommended items
+or users. Tag based recommender systems utilize <hi>similarities</hi> on tags. The tags
+are however mostly free user entered phrases. Therefore, <hi>similarities</hi> computed
+without their <hi>semantic</hi> groundings might lead to less relevant recommendations.
+In this paper, we study <hi>a</hi> <hi>semantic</hi> grounding used <hi>for</hi> tag <hi>similarity</hi> calculus.
+We show <hi>a</hi> comprehensive analysis of <hi>semantic</hi> grounding given by 20 ontologies
+from different domains. The study besides other things reveals that currently
+available OWL ontologies are very narrow and the percentage of the <hi>similarity</hi>
+expansions is rather small. WordNet scores slightly better as it is broader but
+not much as it does not support several <hi>semantic</hi> relationships. Furthermore,
+the study reveals that even with such number of expansions, the recommendations
+change considerably.
+",27.396207979736488,000003
+29,1105.5444,"Semantic Similarity in a Taxonomy: An Information-Based Measure and its
+  Application to Problems of Ambiguity in Natural Language","  This article presents <hi>a</hi> measure of <hi>semantic</hi> <hi>similarity</hi> in an IS-<hi>A</hi> taxonomy
+based on the notion of shared information content. Experimental evaluation
+against <hi>a</hi> benchmark set of human <hi>similarity</hi> judgments demonstrates that the
+measure performs better than the traditional edge-counting approach. The
+article presents algorithms that take advantage of taxonomic <hi>similarity</hi> in
+resolving syntactic and <hi>semantic</hi> ambiguity, along with experimental results
+demonstrating their effectiveness.
+",27.048086687952065,000003
+30,1303.5250,Iterative Expectation for Multi Period Information Retrieval,"  Many Information <hi>Retrieval</hi> (IR) <hi>models</hi> make use of offline statistical
+techniques to score <hi>documents</hi> <hi>for</hi> <hi>ranking</hi> over a single period, rather than use
+<hi>an</hi> online, dynamic system that is responsive to users over time. In this paper,
+we explicitly formulate a general Multi Period Information <hi>Retrieval</hi> problem,
+where we consider <hi>retrieval</hi> as a stochastic yet controllable process. The
+<hi>ranking</hi> action during the process continuously controls the <hi>retrieval</hi> system's
+dynamics, <hi>and</hi> <hi>an</hi> optimal <hi>ranking</hi> policy is found in order to maximise the
+overall users' satisfaction over the multiple periods as much as possible. Our
+derivations show interesting properties about how the posterior probability of
+the <hi>documents</hi> relevancy evolves from users feedbacks through clicks, <hi>and</hi>
+provides a plug-in framework <hi>for</hi> incorporating different click <hi>models</hi>. Based on
+the Multi-Armed Bandit theory, we propose a simple implementation of our
+framework using a dynamic <hi>ranking</hi> rule that takes rank bias <hi>and</hi> exploration of
+<hi>documents</hi> into account. We use TREC data to learn a suitable exploration
+parameter <hi>for</hi> our <hi>model</hi>, <hi>and</hi> then analyse its performance <hi>and</hi> a number of
+variants using a search log data set; the experiments suggest <hi>an</hi> ability to
+explore <hi>document</hi> relevance dynamically over time using user feedback in a way
+that can handle rank bias.
+",40.834683863049634,000004
+31,1101.1637,A Science Model Driven Retrieval Prototype,"  This paper is about a better understanding on the structure <hi>and</hi> dynamics of
+science <hi>and</hi> the usage of these insights <hi>for</hi> compensating the typical problems
+that arises in metadata-driven Digital Libraries. Three science <hi>model</hi> driven
+<hi>retrieval</hi> services are presented: co-word analysis based query expansion,
+re-<hi>ranking</hi> via Bradfordizing <hi>and</hi> author centrality. The services are evaluated
+with relevance assessments from which two important implications emerge: (1)
+precision values of the <hi>retrieval</hi> service are the same or better than the
+tf-idf <hi>retrieval</hi> baseline <hi>and</hi> (2) each service retrieved a disjoint set of
+<hi>documents</hi>. The different services each favor quite other - but still relevant -
+<hi>documents</hi> than pure term-frequency based <hi>rankings</hi>. The proposed <hi>models</hi> <hi>and</hi>
+derived <hi>retrieval</hi> services therefore open up new viewpoints on the scientific
+knowledge space <hi>and</hi> provide <hi>an</hi> alternative framework to structure scholarly
+information systems.
+",40.27008340149382,000004
+32,1009.5003,Demonstrating a Service-Enhanced Retrieval System,"  This paper is a short description of <hi>an</hi> information <hi>retrieval</hi> system enhanced
+by three <hi>model</hi> driven <hi>retrieval</hi> services: (1) co-word analysis based query
+expansion, re-<hi>ranking</hi> via (2) Bradfordizing <hi>and</hi> (3) author centrality. The
+different services each favor quite other - but still relevant - <hi>documents</hi> than
+pure term-frequency based <hi>rankings</hi>. Each service can be interactively combined
+with each other to allow <hi>an</hi> iterative <hi>retrieval</hi> refinement.
+",39.99407930499429,000004
+33,1106.2946,A Unified Relevance Retrieval Model by Eliteness Hypothesis,"  In this paper, <hi>an</hi> Eliteness Hypothesis <hi>for</hi> information <hi>retrieval</hi> is proposed,
+where we define two generative processes to create information items <hi>and</hi>
+queries. By assuming the deterministic relationships between the eliteness of
+terms <hi>and</hi> relevance, we obtain a new theoretical <hi>retrieval</hi> framework. The
+resulting <hi>ranking</hi> function is a unified one as it is capable of using available
+relevance information on both the <hi>document</hi> <hi>and</hi> the query, which is otherwise
+unachievable by existing <hi>retrieval</hi> <hi>models</hi>. Our preliminary experiment on a
+simple <hi>ranking</hi> function has demonstrated the potential of the approach.
+",39.26867255661112,000004
+34,1011.0404,A New Email Retrieval Ranking Approach,"  Email <hi>Retrieval</hi> task has recently taken much attention to help the user
+retrieve the email(s) related to the submitted query. Up to our knowledge,
+existing email <hi>retrieval</hi> <hi>ranking</hi> approaches sort the retrieved emails based on
+some heuristic rules, which are either search clues or some predefined user
+criteria rooted in email fields. Unfortunately, the user usually does not know
+the effective rule that acquires best <hi>ranking</hi> related to his query. This paper
+presents a new email <hi>retrieval</hi> <hi>ranking</hi> approach to tackle this problem. It
+ranks the retrieved emails based on a scoring function that depends on crucial
+email fields, namely subject, content, <hi>and</hi> sender. The paper also proposes <hi>an</hi>
+architecture to allow every user in a network/group of users to be able, if
+permissible, to know the most important network senders who are interested in
+his submitted query words. The experimental evaluation on Enron corpus prove
+that our approach outperforms known email <hi>retrieval</hi> <hi>ranking</hi> approaches
+",37.890584504973646,000004
+35,1011.0502,A New Email Retrieval Ranking Approach,"  Email <hi>Retrieval</hi> task has recently taken much attention to help the user
+retrieve the email(s) related to the submitted query. Up to our knowledge,
+existing email <hi>retrieval</hi> <hi>ranking</hi> approaches sort the retrieved emails based on
+some heuristic rules, which are either search clues or some predefined user
+criteria rooted in email fields. Unfortunately, the user usually does not know
+the effective rule that acquires best <hi>ranking</hi> related to his query. This paper
+presents a new email <hi>retrieval</hi> <hi>ranking</hi> approach to tackle this problem. It
+ranks the retrieved emails based on a scoring function that depends on crucial
+email fields, namely subject, content, <hi>and</hi> sender. The paper also proposes <hi>an</hi>
+architecture to allow every user in a network/group of users to be able, if
+permissible, to know the most important network senders who are interested in
+his submitted query words. The experimental evaluation on Enron corpus prove
+that our approach outperforms known email <hi>retrieval</hi> <hi>ranking</hi> approaches.
+",37.890584504973646,000004
+36,0711.3128,Entity Ranking in Wikipedia,"  The traditional entity extraction problem lies in the ability of extracting
+named entities from plain text using natural language processing techniques <hi>and</hi>
+intensive training from large <hi>document</hi> collections. Examples of named entities
+include organisations, people, locations, or dates. There are many research
+activities involving named entities; we are interested in entity <hi>ranking</hi> in the
+field of information <hi>retrieval</hi>. In this paper, we describe our approach to
+identifying <hi>and</hi> <hi>ranking</hi> entities from the INEX Wikipedia <hi>document</hi> collection.
+Wikipedia offers a number of interesting features <hi>for</hi> entity identification <hi>and</hi>
+<hi>ranking</hi> that we first introduce. We then describe the principles <hi>and</hi> the
+architecture of our entity <hi>ranking</hi> system, <hi>and</hi> introduce our methodology <hi>for</hi>
+evaluation. Our preliminary results show that the use of categories <hi>and</hi> the
+link structure of Wikipedia, together with entity examples, can significantly
+improve <hi>retrieval</hi> effectiveness.
+",37.56019265539074,000004
+37,2004.12832,"ColBERT: Efficient and Effective Passage Search via Contextualized Late
+  Interaction over BERT","  Recent progress in Natural Language Understanding (NLU) is driving fast-paced
+advances in Information <hi>Retrieval</hi> (IR), largely owed to fine-tuning deep
+language <hi>models</hi> (LMs) <hi>for</hi> <hi>document</hi> <hi>ranking</hi>. While remarkably effective, the
+<hi>ranking</hi> <hi>models</hi> based on these LMs increase computational cost by orders of
+magnitude over prior approaches, particularly as they must feed each
+query-<hi>document</hi> pair through a massive neural network to compute a single
+relevance score. To tackle this, we present ColBERT, a novel <hi>ranking</hi> <hi>model</hi> that
+adapts deep LMs (in particular, BERT) <hi>for</hi> <hi>efficient</hi> <hi>retrieval</hi>. ColBERT
+introduces a late interaction architecture that independently encodes the query
+<hi>and</hi> the <hi>document</hi> using BERT <hi>and</hi> then employs a cheap yet powerful interaction
+step that <hi>models</hi> their fine-grained similarity. By delaying <hi>and</hi> yet retaining
+this fine-granular interaction, ColBERT can leverage the expressiveness of deep
+LMs while simultaneously gaining the ability to pre-compute <hi>document</hi>
+representations offline, considerably speeding up query processing. Beyond
+reducing the cost of re-<hi>ranking</hi> the <hi>documents</hi> retrieved by a traditional <hi>model</hi>,
+ColBERT's pruning-friendly interaction mechanism enables leveraging
+vector-similarity indexes <hi>for</hi> end-to-end <hi>retrieval</hi> directly from a large
+<hi>document</hi> collection. We extensively evaluate ColBERT using two recent passage
+search datasets. Results show that ColBERT's effectiveness is competitive with
+existing BERT-based <hi>models</hi> (<hi>and</hi> outperforms every non-BERT baseline), while
+executing two orders-of-magnitude faster <hi>and</hi> requiring four orders-of-magnitude
+fewer FLOPs per query.
+",37.394744843703215,000004
+38,1107.1660,Click Efficiency: A Unified Optimal Ranking for Online Ads and Documents,"  Traditionally the probabilistic <hi>ranking</hi> principle is used to rank the search
+results while the <hi>ranking</hi> based on expected profits is used <hi>for</hi> paid placement
+of ads. These <hi>rankings</hi> try to maximize the expected utilities based on the user
+click <hi>models</hi>. Recent empirical analysis on search engine logs suggests a
+unified click <hi>models</hi> <hi>for</hi> both ranked ads <hi>and</hi> search results. The segregated
+view of <hi>document</hi> <hi>and</hi> ad <hi>rankings</hi> does not consider this commonality. Further,
+the used <hi>models</hi> consider parameters of (i) probability of the user abandoning
+browsing results (ii) perceived relevance of result snippets. But how to
+consider them <hi>for</hi> improved <hi>ranking</hi> is unknown currently. In this paper, we
+propose a generalized <hi>ranking</hi> function---namely ""Click Efficiency (CE)""---<hi>for</hi>
+<hi>documents</hi> <hi>and</hi> ads based on empirically proven user click <hi>models</hi>. The <hi>ranking</hi>
+considers parameters (i) <hi>and</hi> (ii) above, optimal <hi>and</hi> has the same time
+complexity as sorting. To exploit its generality, we examine the reduced forms
+of CE <hi>ranking</hi> under different assumptions enumerating a hierarchy of <hi>ranking</hi>
+functions. Some of the <hi>rankings</hi> in the hierarchy are currently used ad <hi>and</hi>
+<hi>document</hi> <hi>ranking</hi> functions; while others suggest new <hi>rankings</hi>. While optimality
+of <hi>ranking</hi> is sufficient <hi>for</hi> <hi>document</hi> <hi>ranking</hi>, applying CE <hi>ranking</hi> to ad
+auctions requires <hi>an</hi> appropriate pricing mechanism. We incorporate a second
+price based pricing mechanism with the proposed <hi>ranking</hi>. Our analysis proves
+several desirable properties including revenue dominance over VCG <hi>for</hi> the same
+bid vector <hi>and</hi> existence of a Nash Equilibrium in pure strategies. The
+equilibrium is socially optimal, <hi>and</hi> revenue equivalent to the truthful VCG
+equilibrium. Further, we relax the independence assumption in CE <hi>ranking</hi> <hi>and</hi>
+analyze the diversity <hi>ranking</hi> problem. We show that optimal diversity <hi>ranking</hi>
+is NP-Hard in general, <hi>and</hi> that a constant time approximation is unlikely.
+",37.21663832036359,000004
+39,1204.0186,Semantic-Sensitive Web Information Retrieval Model for HTML Documents,"  With the advent of the Internet, a new era of digital information exchange
+has begun. Currently, the Internet encompasses more than five billion online
+sites <hi>and</hi> this number is exponentially increasing every day. Fundamentally,
+Information <hi>Retrieval</hi> (IR) is the science <hi>and</hi> practice of storing <hi>documents</hi> <hi>and</hi>
+retrieving information from within these <hi>documents</hi>. Mathematically, IR systems
+are at the core based on a feature vector <hi>model</hi> coupled with a term weighting
+scheme that weights terms in a <hi>document</hi> according to their significance with
+respect to the context in which they appear. Practically, Vector Space <hi>Model</hi>
+(VSM), Term Frequency (TF), <hi>and</hi> Inverse Term Frequency (IDF) are among other
+long-established techniques employed in mainstream IR systems. However, present
+IR <hi>models</hi> only target generic-type text <hi>documents</hi>, in that, they do not
+consider specific formats of files such as HTML web <hi>documents</hi>. This paper
+proposes a new semantic-sensitive web information <hi>retrieval</hi> <hi>model</hi> <hi>for</hi> HTML
+<hi>documents</hi>. It consists of a vector <hi>model</hi> called SWVM <hi>and</hi> a weighting scheme
+called BTF-IDF, particularly designed to support the indexing <hi>and</hi> <hi>retrieval</hi> of
+HTML web <hi>documents</hi>. The chief advantage of the proposed <hi>model</hi> is that it
+assigns extra weights <hi>for</hi> terms that appear in certain pre-specified HTML tags
+that are correlated to the semantics of the <hi>document</hi>. Additionally, the <hi>model</hi>
+is semantic-sensitive as it generates synonyms <hi>for</hi> every term being indexed <hi>and</hi>
+later weights them appropriately to increase the likelihood of retrieving
+<hi>documents</hi> with similar context but different vocabulary terms. Experiments
+conducted, revealed a momentous enhancement in the precision of web IR systems
+<hi>and</hi> a radical increase in the number of relevant <hi>documents</hi> being retrieved. As
+further research, the proposed <hi>model</hi> is to be upgraded so as to support the
+indexing <hi>and</hi> <hi>retrieval</hi> of web images in multimedia-rich web <hi>documents</hi>.
+",37.11975842834829,000004
+40,1106.4509,Machine Learning Markets,"  Prediction markets show considerable promise <hi>for</hi> developing flexible
+mechanisms <hi>for</hi> <hi>machine</hi> <hi>learning</hi>. Here, <hi>machine</hi> <hi>learning</hi> markets <hi>for</hi>
+multivariate systems are defined, and <hi>a</hi> utility-based framework <hi>is</hi> established
+<hi>for</hi> their analysis. This differs from the usual approach of defining static
+betting functions. It <hi>is</hi> shown that such markets can implement <hi>model</hi>
+combination <hi>methods</hi> used <hi>in</hi> <hi>machine</hi> <hi>learning</hi>, such as product of expert and
+mixture of expert approaches as equilibrium pricing <hi>models</hi>, by varying agent
+utility functions. They can also implement <hi>models</hi> composed of local potentials,
+and message passing <hi>methods</hi>. Prediction markets also allow <hi>for</hi> more flexible
+combinations, by combining multiple <hi>different</hi> utility functions. Conversely,
+the market mechanisms implement inference <hi>in</hi> the relevant probabilistic <hi>models</hi>.
+This means that market mechanism can be utilized <hi>for</hi> implementing parallelized
+<hi>model</hi> building and inference <hi>for</hi> probabilistic <hi>modelling</hi>.
+",38.342525472543976,000005
+41,1202.3758,"Nonparametric Divergence Estimation with Applications to Machine
+  Learning on Distributions","  Low-dimensional <hi>embedding</hi>, manifold <hi>learning</hi>, clustering, classification, and
+anomaly detection are among the most important problems <hi>in</hi> <hi>machine</hi> <hi>learning</hi>.
+The existing <hi>methods</hi> usually consider the case when each instance has <hi>a</hi> fixed,
+finite-dimensional feature representation. Here we consider <hi>a</hi> <hi>different</hi>
+setting. We assume that each instance corresponds <hi>to</hi> <hi>a</hi> continuous probability
+distribution. These distributions are unknown, but we are given some i.i.d.
+samples from each distribution. Our goal <hi>is</hi> <hi>to</hi> estimate the distances between
+these distributions and use these distances <hi>to</hi> perform low-dimensional
+<hi>embedding</hi>, clustering/classification, or anomaly detection <hi>for</hi> the
+distributions. We present estimation algorithms, describe how <hi>to</hi> apply them <hi>for</hi>
+<hi>machine</hi> <hi>learning</hi> tasks on distributions, and show empirical results on
+synthetic data, real word images, and astronomical data sets.
+",36.77784338029751,000005
+42,1001.2709,Kernel machines with two layers and multiple kernel learning,"  <hi>In</hi> this paper, the framework of kernel <hi>machines</hi> with two layers <hi>is</hi>
+introduced, generalizing classical kernel <hi>methods</hi>. The new <hi>learning</hi> methodology
+provide <hi>a</hi> formal connection between computational architectures with multiple
+layers and the theme of kernel <hi>learning</hi> <hi>in</hi> standard regularization <hi>methods</hi>.
+First, <hi>a</hi> representer theorem <hi>for</hi> two-layer networks <hi>is</hi> presented, showing that
+finite linear combinations of kernels on each layer are optimal architectures
+whenever the corresponding functions solve suitable variational problems <hi>in</hi>
+reproducing kernel Hilbert spaces (RKHS). The input-output map expressed by
+these architectures turns out <hi>to</hi> be equivalent <hi>to</hi> <hi>a</hi> suitable single-layer
+kernel <hi>machines</hi> <hi>in</hi> which the kernel function <hi>is</hi> also learned from the data.
+Recently, the so-called multiple kernel <hi>learning</hi> <hi>methods</hi> have attracted
+considerable attention <hi>in</hi> the <hi>machine</hi> <hi>learning</hi> literature. <hi>In</hi> this paper,
+multiple kernel <hi>learning</hi> <hi>methods</hi> are shown <hi>to</hi> be specific cases of kernel
+<hi>machines</hi> with two layers <hi>in</hi> which the second layer <hi>is</hi> linear. Finally, <hi>a</hi> simple
+and effective multiple kernel <hi>learning</hi> <hi>method</hi> called RLS2 (regularized least
+squares with two layers) <hi>is</hi> introduced, and his performances on several
+<hi>learning</hi> problems are extensively analyzed. An open source MATLAB toolbox <hi>to</hi>
+train and validate RLS2 <hi>models</hi> with <hi>a</hi> Graphic User Interface <hi>is</hi> available.
+",33.265124664915945,000005
+43,1104.4950,"A Machine Learning Based Analytical Framework for Semantic Annotation
+  Requirements","  The Semantic Web <hi>is</hi> an extension of the current web <hi>in</hi> which information <hi>is</hi>
+given well-defined meaning. The perspective of Semantic Web <hi>is</hi> <hi>to</hi> promote the
+quality and intelligence of the current web by changing its contents into
+<hi>machine</hi> understandable form. Therefore, semantic level information <hi>is</hi> one of
+the cornerstones of the Semantic Web. The process of adding semantic metadata
+<hi>to</hi> web resources <hi>is</hi> called Semantic Annotation. <hi>There</hi> are many obstacles
+against the Semantic Annotation, such as multilinguality, scalability, and
+issues which are related <hi>to</hi> diversity and inconsistency <hi>in</hi> content of <hi>different</hi>
+web pages. Due <hi>to</hi> the wide range of domains and the dynamic environments that
+the Semantic Annotation systems must be performed on, the problem of automating
+annotation process <hi>is</hi> one of the significant challenges <hi>in</hi> this domain. <hi>To</hi>
+overcome this problem, <hi>different</hi> <hi>machine</hi> <hi>learning</hi> approaches such as supervised
+<hi>learning</hi>, unsupervised <hi>learning</hi> and more recent ones like, semi-supervised
+<hi>learning</hi> and active <hi>learning</hi> have been utilized. <hi>In</hi> this paper we present an
+inclusive layered classification of Semantic Annotation challenges and discuss
+the most important issues <hi>in</hi> this field. Also, we review and analyze <hi>machine</hi>
+<hi>learning</hi> applications <hi>for</hi> solving semantic annotation problems. <hi>For</hi> this goal,
+the article tries <hi>to</hi> closely study and categorize related researches <hi>for</hi> better
+understanding and <hi>to</hi> reach <hi>a</hi> framework that can map <hi>machine</hi> <hi>learning</hi> techniques
+into the Semantic Annotation challenges and requirements.
+",33.14665929397066,000005
+44,0907.5032,Restart Strategy Selection using Machine Learning Techniques,"  Restart strategies are an important factor <hi>in</hi> the performance of
+conflict-driven Davis Putnam style SAT solvers. Selecting <hi>a</hi> good restart
+strategy <hi>for</hi> <hi>a</hi> problem instance can enhance the performance of <hi>a</hi> solver.
+Inspired by recent success applying <hi>machine</hi> <hi>learning</hi> techniques <hi>to</hi> predict the
+runtime of SAT solvers, we present <hi>a</hi> <hi>method</hi> which uses <hi>machine</hi> <hi>learning</hi> <hi>to</hi>
+boost solver performance through <hi>a</hi> smart selection of the restart strategy.
+Based on easy <hi>to</hi> compute features, we train both <hi>a</hi> satisfiability classifier
+and runtime <hi>models</hi>. We use these <hi>models</hi> <hi>to</hi> choose between restart strategies.
+We present experimental results comparing this technique with the most commonly
+used restart strategies. Our results demonstrate that <hi>machine</hi> <hi>learning</hi> <hi>is</hi>
+effective <hi>in</hi> improving solver performance.
+",33.07931237836924,000005
+45,0903.0314,Granularity-Adaptive Proof Presentation,"  When mathematicians present proofs they usually adapt their explanations <hi>to</hi>
+their didactic goals and <hi>to</hi> the (assumed) knowledge of their addressees. Modern
+automated theorem provers, <hi>in</hi> contrast, present proofs usually at <hi>a</hi> fixed level
+of detail (also called <hi>granularity</hi>). Often these presentations are neither
+intended nor suitable <hi>for</hi> human use. <hi>A</hi> challenge therefore <hi>is</hi> <hi>to</hi> develop user-
+and goal-adaptive proof presentation techniques that obey common mathematical
+practice. We present <hi>a</hi> flexible and adaptive approach <hi>to</hi> proof presentation
+that exploits <hi>machine</hi> <hi>learning</hi> techniques <hi>to</hi> extract <hi>a</hi> <hi>model</hi> of the specific
+<hi>granularity</hi> of proof examples and employs this <hi>model</hi> <hi>for</hi> the automated
+generation of further proofs at an adapted level of <hi>granularity</hi>.
+",32.27721492230268,000005
+46,1111.2111,"Generic Multiplicative Methods for Implementing Machine Learning
+  Algorithms on MapReduce","  <hi>In</hi> this paper we introduce <hi>a</hi> generic <hi>model</hi> <hi>for</hi> multiplicative algorithms
+which <hi>is</hi> suitable <hi>for</hi> the MapReduce parallel programming paradigm. We implement
+three typical <hi>machine</hi> <hi>learning</hi> algorithms <hi>to</hi> demonstrate how similarity
+comparison, gradient descent, power <hi>method</hi> and other classic <hi>learning</hi>
+techniques fit this <hi>model</hi> well. Two versions of large-scale matrix
+multiplication are discussed <hi>in</hi> this paper, and <hi>different</hi> <hi>methods</hi> are developed
+<hi>for</hi> both cases with regard <hi>to</hi> their unique computational characteristics and
+problem settings. <hi>In</hi> contrast <hi>to</hi> earlier research, we focus on fundamental
+linear algebra techniques that establish <hi>a</hi> generic approach <hi>for</hi> <hi>a</hi> range of
+algorithms, rather than specific ways of scaling up algorithms one at <hi>a</hi> time.
+Experiments show promising results when evaluated on both speedup and accuracy.
+Compared with <hi>a</hi> standard implementation with computational complexity $O(m^3)$
+<hi>in</hi> the worst case, the large-scale matrix multiplication experiments prove our
+design <hi>is</hi> considerably more efficient and maintains <hi>a</hi> good speedup as the
+number of cores increases. Algorithm-specific experiments also produce
+encouraging results on runtime performance.
+",31.72647478271756,000005
+47,1106.2156,"A Computational Framework for Nonlinear Dimensionality Reduction of
+  Large Data Sets: The Exploratory Inspection Machine (XIM)","  <hi>In</hi> this paper, we present <hi>a</hi> novel computational framework <hi>for</hi> nonlinear
+dimensionality reduction which <hi>is</hi> specifically suited <hi>to</hi> process large data
+sets: the Exploratory Inspection <hi>Machine</hi> (XIM). XIM introduces <hi>a</hi> conceptual
+cross-link between hitherto separate domains of <hi>machine</hi> <hi>learning</hi>, namely
+topographic vector quantization and divergence-based neighbor <hi>embedding</hi>
+approaches. <hi>There</hi> are three ways <hi>to</hi> conceptualize XIM, namely (i) as the
+inversion of the Exploratory Observation <hi>Machine</hi> (XOM) and its variants, such
+as Neighbor <hi>Embedding</hi> XOM (NE-XOM), (ii) as <hi>a</hi> powerful optimization scheme <hi>for</hi>
+divergence-based neighbor <hi>embedding</hi> cost functions inspired by Stochastic
+Neighbor <hi>Embedding</hi> (SNE) and its variants, such as t-distributed SNE (t-SNE),
+and (iii) as an extension of topographic vector quantization <hi>methods</hi>, such as
+the Self-Organizing Map (SOM). By preserving both global and local data
+structure, XIM combines the virtues of classical and advanced recent <hi>embedding</hi>
+<hi>methods</hi>. It permits direct visualization of large data collections without the
+need <hi>for</hi> prior data reduction. Finally, XIM can contribute <hi>to</hi> many application
+domains of data analysis and visualization important throughout the sciences
+and engineering, such as pattern matching, constrained incremental <hi>learning</hi>,
+data clustering, and the analysis of non-metric dissimilarity data.
+",31.013278351681436,000005
+48,1206.6443,Isoelastic Agents and Wealth Updates in Machine Learning Markets,"  Recently, prediction markets have shown considerable promise <hi>for</hi> developing
+flexible mechanisms <hi>for</hi> <hi>machine</hi> <hi>learning</hi>. <hi>In</hi> this paper, agents with isoelastic
+utilities are considered. It <hi>is</hi> shown that the costs associated with
+homogeneous markets of agents with isoelastic utilities produce equilibrium
+prices corresponding <hi>to</hi> alpha-mixtures, with <hi>a</hi> particular form of mixing
+component relating <hi>to</hi> each agent's wealth. We also demonstrate that wealth
+accumulation <hi>for</hi> logarithmic and other isoelastic agents (through payoffs on
+prediction of training targets) can implement both Bayesian <hi>model</hi> updates and
+mixture weight updates by imposing <hi>different</hi> market payoff structures. An
+iterative algorithm <hi>is</hi> given <hi>for</hi> market equilibrium computation. We demonstrate
+that inhomogeneous markets of agents with isoelastic utilities outperform state
+of the art aggregate classifiers such as random forests, as well as single
+classifiers (neural networks, decision trees) on <hi>a</hi> number of <hi>machine</hi> <hi>learning</hi>
+benchmarks, and show that isoelastic combination <hi>methods</hi> are generally better
+than their logarithmic counterparts.
+",30.82435088248194,000005
+49,1011.3494,Learning Planar Ising Models,"  Inference and <hi>learning</hi> of graphical <hi>models</hi> are both well-studied problems <hi>in</hi>
+statistics and <hi>machine</hi> <hi>learning</hi> that have found many applications <hi>in</hi> science
+and engineering. However, exact inference <hi>is</hi> intractable <hi>in</hi> general graphical
+<hi>models</hi>, which suggests the problem of seeking the best approximation <hi>to</hi> <hi>a</hi>
+collection of random variables within some tractable family of graphical
+<hi>models</hi>. <hi>In</hi> this paper, we focus our attention on the class of planar Ising
+<hi>models</hi>, <hi>for</hi> which inference <hi>is</hi> tractable using techniques of statistical
+physics [Kac and Ward; Kasteleyn]. Based on these techniques and recent <hi>methods</hi>
+<hi>for</hi> planarity testing and planar <hi>embedding</hi> [Chrobak and Payne], we propose <hi>a</hi>
+simple greedy algorithm <hi>for</hi> <hi>learning</hi> the best planar Ising <hi>model</hi> <hi>to</hi> approximate
+an arbitrary collection of binary random variables (possibly from sample data).
+Given the set of all pairwise correlations among variables, we select <hi>a</hi> planar
+graph and optimal planar Ising <hi>model</hi> defined on this graph <hi>to</hi> best approximate
+that set of correlations. We demonstrate our <hi>method</hi> <hi>in</hi> some simulations and <hi>for</hi>
+the application of <hi>modeling</hi> senate voting records.
+",30.541711708998093,000005
+50,2010.11929,"An Image is Worth 16x16 Words: Transformers for Image Recognition at
+  Scale","  While the <hi>Transformer</hi> architecture has become the de-facto standard for
+natural language <hi>processing</hi> tasks, its applications <hi>to</hi> computer vision remain
+limited. In vision, attention <hi>is</hi> either applied in conjunction with
+convolutional networks, or <hi>used</hi> <hi>to</hi> replace certain components of convolutional
+networks while keeping their overall structure in place. We show that this
+reliance on CNNs <hi>is</hi> not necessary and <hi>a</hi> pure <hi>transformer</hi> applied directly <hi>to</hi>
+sequences of <hi>image</hi> patches can perform very well on <hi>image</hi> classification tasks.
+When pre-trained on large amounts of data and transferred <hi>to</hi> multiple mid-sized
+or small <hi>image</hi> recognition benchmarks (ImageNet, CIFAR-100, VTAB, etc.), Vision
+<hi>Transformer</hi> (ViT) attains excellent results compared <hi>to</hi> state-of-the-art
+convolutional networks while requiring substantially fewer computational
+resources <hi>to</hi> train.
+",36.70531661205192,000006
+51,2205.13137,"MixMAE: Mixed and Masked Autoencoder for Efficient Pretraining of
+  Hierarchical Vision Transformers","  In this paper, we propose Mixed and Masked AutoEncoder (MixMAE), <hi>a</hi> simple but
+efficient pretraining method that <hi>is</hi> applicable <hi>to</hi> various hierarchical Vision
+<hi>Transformers</hi>. Existing masked <hi>image</hi> <hi>modeling</hi> (MIM) methods for hierarchical
+Vision <hi>Transformers</hi> replace <hi>a</hi> random subset of input tokens with <hi>a</hi> special
+[MASK] symbol and aim at reconstructing original <hi>image</hi> tokens from the
+corrupted <hi>image</hi>. However, we find that <hi>using</hi> the [MASK] symbol greatly slows
+down the training and causes pretraining-finetuning inconsistency, due <hi>to</hi> the
+large masking ratio (e.g., 60% in SimMIM). On the other hand, MAE does not
+introduce [MASK] tokens at its encoder at all but <hi>is</hi> not applicable for
+hierarchical Vision <hi>Transformers</hi>. <hi>To</hi> solve the issue and accelerate the
+pretraining of hierarchical <hi>models</hi>, we replace the masked tokens of one <hi>image</hi>
+with visible tokens of another <hi>image</hi>, i.e., creating <hi>a</hi> mixed <hi>image</hi>. We then
+conduct dual reconstruction <hi>to</hi> reconstruct the two original <hi>images</hi> from the
+mixed input, which significantly improves efficiency. While MixMAE can be
+applied <hi>to</hi> various hierarchical <hi>Transformers</hi>, this paper explores <hi>using</hi> Swin
+<hi>Transformer</hi> with <hi>a</hi> large window size and scales up <hi>to</hi> huge <hi>model</hi> size (<hi>to</hi> reach
+600M parameters). Empirical results demonstrate that MixMAE can learn
+high-quality visual representations efficiently. Notably, MixMAE with
+Swin-B/W14 achieves 85.1% top-1 accuracy on ImageNet-1K by pretraining for 600
+epochs. Besides, its transfer performances on the other 6 datasets show that
+MixMAE has better FLOPs / performance tradeoff than previous popular MIM
+methods. Code <hi>is</hi> available at https://github.com/Sense-X/MixMIM.
+",31.530281856248216,000006
+52,0905.3998,"Predicate Transformers and Linear Logic, yet another denotational model","  In the refinement calculus, monotonic predicate <hi>transformers</hi> are <hi>used</hi> <hi>to</hi>
+<hi>model</hi> specifications for (imperative) programs. Together with <hi>a</hi> natural notion
+of simulation, they form <hi>a</hi> category enjoying many algebraic properties. We
+build on this structure <hi>to</hi> make predicate <hi>transformers</hi> into <hi>a</hi> de notational
+<hi>model</hi> of full linear logic: all the logical constructions have <hi>a</hi> natural
+interpretation in terms of predicate <hi>transformers</hi> (i.e. in terms of
+specifications). We then interpret proofs of <hi>a</hi> formula by <hi>a</hi> safety property for
+the corresponding specification.
+",29.274745861736914,000006
+53,2004.13138,"Investigating the Effectiveness of Representations Based on Pretrained
+  Transformer-based Language Models in Active Learning for Labelling Text
+  Datasets","  Active learning has been shown <hi>to</hi> be an effective <hi>way</hi> <hi>to</hi> alleviate some of
+the effort required in utilising large collections of unlabelled data for
+machine learning tasks without needing <hi>to</hi> fully label them. The representation
+mechanism <hi>used</hi> <hi>to</hi> represent text documents when performing active learning,
+however, has <hi>a</hi> significant influence on how effective the <hi>process</hi> will be.
+While simple vector representations such as bag-of-words and embedding-based
+representations based on techniques such as word2vec have been shown <hi>to</hi> be an
+effective <hi>way</hi> <hi>to</hi> represent documents during active learning, the emergence of
+representation mechanisms based on the pre-trained <hi>transformer</hi>-based neural
+network <hi>models</hi> popular in natural language <hi>processing</hi> research (e.g. BERT)
+offer <hi>a</hi> promising, and as yet not fully explored, alternative. This paper
+describes <hi>a</hi> comprehensive evaluation of the effectiveness of representations
+based on pre-trained <hi>transformer</hi>-based language <hi>models</hi> for active learning.
+This evaluation shows that <hi>transformer</hi>-based <hi>models</hi>, especially BERT-like
+<hi>models</hi>, that have not yet been widely <hi>used</hi> in active learning, achieve <hi>a</hi>
+significant improvement over more commonly <hi>used</hi> vector representations like
+bag-of-words or other classical word embeddings like word2vec. This paper also
+investigates the effectiveness of representations based on variants of BERT
+such as Roberta, Albert as well as comparing the effectiveness of the [CLS]
+token representation and the aggregated representation that can be generated
+<hi>using</hi> BERT-like <hi>models</hi>. Finally, we propose an approach Adaptive Tuning Active
+Learning. Our experiments show that the limited label information acquired in
+active learning can not only be <hi>used</hi> for training <hi>a</hi> classifier but can also
+adaptively improve the embeddings generated by the BERT-like language <hi>models</hi> as
+well.
+",28.978261621411328,000006
+54,1207.3208,Formal Verification of Monad Transformers,"  We present techniques for reasoning about constructor classes that (like the
+monad class) fix polymorphic operations and assert polymorphic axioms. We do
+not require <hi>a</hi> logic with first-class type constructors, first-class
+polymorphism, or type quantification; instead, we rely on <hi>a</hi> domain-theoretic
+<hi>model</hi> of the type system in <hi>a</hi> universal domain <hi>to</hi> provide these features.
+  These ideas are implemented in the Tycon library for the Isabelle theorem
+prover, which builds on the HOLCF library of domain theory. The Tycon library
+provides various axiomatic type constructor classes, including functors and
+monads. It also provides automation for instantiating those classes, and for
+defining further subclasses.
+  We <hi>use</hi> the Tycon library <hi>to</hi> formalize three Haskell monad <hi>transformers</hi>: the
+error <hi>transformer</hi>, the writer <hi>transformer</hi>, and the resumption <hi>transformer</hi>. The
+error and writer <hi>transformers</hi> do not universally preserve the monad laws;
+however, we establish datatype invariants for each, showing that they are valid
+monads when viewed as abstract datatypes.
+",28.616874829782518,000006
+55,0908.2901,"Prediction of remaining life of power transformers based on left
+  truncated and right censored lifetime data","  Prediction of the remaining life of high-voltage power <hi>transformers</hi> <hi>is</hi> an
+important issue for energy companies because of the need for planning
+maintenance and capital expenditures. Lifetime data for such <hi>transformers</hi> are
+complicated because <hi>transformer</hi> lifetimes can extend over many decades and
+<hi>transformer</hi> designs and manufacturing practices have evolved. We were asked <hi>to</hi>
+develop statistically-based predictions for the lifetimes of an energy
+company's fleet of high-voltage transmission and distribution <hi>transformers</hi>. The
+company's data records begin in 1980, providing information on installation and
+failure dates of <hi>transformers</hi>. Although the dataset contains many units that
+were installed before 1980, <hi>there</hi> <hi>is</hi> no information about units that were
+installed and failed before 1980. Thus, the data are left truncated and right
+censored. We <hi>use</hi> <hi>a</hi> parametric lifetime <hi>model</hi> <hi>to</hi> describe the lifetime
+distribution of individual <hi>transformers</hi>. We develop <hi>a</hi> statistical procedure,
+based on age-adjusted life distributions, for computing <hi>a</hi> prediction interval
+for remaining life for individual <hi>transformers</hi> now in service. We then extend
+these ideas <hi>to</hi> provide predictions and prediction intervals for the cumulative
+number of failures, over <hi>a</hi> range of time, for the overall fleet of
+<hi>transformers</hi>.
+",28.47094872820758,000006
+56,1307.1149,"Solar Activity and Transformer Failures in the Greek National Electric
+  Grid","  We study both the short term and long term effects of solar activity on the
+large <hi>transformers</hi> (150kV and 400kV) of the Greek national electric grid. We
+<hi>use</hi> data analysis and various analytic and statistical methods and <hi>models</hi>.
+Contrary <hi>to</hi> the common belief in PPC Greece, we see that <hi>there</hi> are considerable
+both short term (immediate) and long term effects of solar activity onto large
+<hi>transformers</hi> in <hi>a</hi> mid-latitude country (latitude approx. 35 - 41 degrees North)
+like Greece. Our results can be summarized as follows: For the short term
+effects: During 1989-2010 <hi>there</hi> were 43 stormy days (namely days with for
+example Ap larger or equal <hi>to</hi> 100) and we had 19 failures occurring during <hi>a</hi>
+stormy day plus or minus 3 days and 51 failures occurring during <hi>a</hi> stormy day
+plus or minus 7 days. All these failures can be directly related <hi>to</hi>
+Geomagnetically Induced Currents (GICs). Explicit cases are presented. For the
+long term effects we have two main results: The annual <hi>transformer</hi> failure
+number for the period of study 1989-2010 follows the solar activity pattern (11
+year periodicity, bell-shaped graph). Yet the maximum number of <hi>transformer</hi>
+failures occur 3-4 years after the maximum of solar activity. <hi>There</hi> <hi>is</hi>
+statistical correlation between solar activity expressed <hi>using</hi> various newly
+defined long term solar activity indices and the annual number of <hi>transformer</hi>
+failures. These new long term solar activity indices were defined <hi>using</hi> both
+local (from geomagnetic stations in Greece) and global (planetary averages)
+geomagnetic data. Applying both linear and non-linear statistical regression we
+compute the regression equations and the corresponding coefficients of
+determination.
+",28.221137897121043,000006
+57,1107.2684,Coils and transformers - often used but seldomly explained correctly,"  The devices coil and <hi>transformer</hi> are subjects of interest in numerous
+schoolbooks, in introductory scientific textbooks of physics and engineering,
+and in laboratory courses at universities. Many descriptions, however, draw <hi>a</hi>
+somewhat distorted picture of the underlying physical mechanisms and provide
+half-knowledge or even clear misconceptions that should not be left uncommented
+and are therefore studied in detail:
+  (1) Primary and secondary voltage at <hi>a</hi> <hi>transformer</hi> have <hi>a</hi> different sign.
+  (2) Electromagnetic induction <hi>is</hi> the only mechanism of importance for coils
+and <hi>transformers</hi>.
+  (3) The terminal voltage at coils and <hi>transformers</hi> <hi>is</hi> compensated by the
+so-called ""induced voltage"" (emf), which explains why Kirchhoff's voltage law
+also applies <hi>to</hi> coils and <hi>transformers</hi>.
+  (4) The cores of coils and <hi>transformers</hi> are <hi>used</hi> for their ability <hi>to</hi> store
+energy. Energy <hi>is</hi> transported from the primary <hi>to</hi> the secondary coil within the
+magnetic core.
+  (5) The stray magnetic and electric fields are sencondary effects not having
+<hi>a</hi> major effect on energy transport.
+  (6) The higher the load current, the easier <hi>a</hi> <hi>transformer</hi> goes into
+saturation.
+  (7) The higher the number of turns at the primary coil, the larger the
+magnetic flux in the core.
+  (8) <hi>Transformers</hi> with cores having an air gap have <hi>a</hi> lower coupling factor,
+because the stray inductivity increases.
+  In the paper, the most important characteristics of coil and <hi>transformers</hi> are
+derived directly from Maxwell's equation for idealised conditions, and
+subsequently, the different misconceptions are discussed and corrected.
+",27.70929911848279,000006
+58,2205.13249,DT-SV: A Transformer-based Time-domain Approach for Speaker Verification,"  Speaker verification (SV) aims <hi>to</hi> determine whether the speaker's identity of
+<hi>a</hi> test utterance <hi>is</hi> the same as the reference speech. In the past few years,
+extracting speaker embeddings <hi>using</hi> deep neural networks for SV systems has
+gone mainstream. Recently, different attention mechanisms and <hi>Transformer</hi>
+networks have been explored widely in SV fields. However, utilizing the
+original <hi>Transformer</hi> in SV directly may have frame-level information waste on
+output features, which could lead <hi>to</hi> restrictions on capacity and
+discrimination of speaker embeddings. Therefore, we propose an approach <hi>to</hi>
+derive utterance-level speaker embeddings via <hi>a</hi> <hi>Transformer</hi> architecture that
+<hi>uses</hi> <hi>a</hi> novel loss function named diffluence loss <hi>to</hi> integrate the feature
+information of different <hi>Transformer</hi> layers. Therein, the diffluence loss aims
+<hi>to</hi> aggregate frame-level features into an utterance-level representation, and
+it could be integrated into the <hi>Transformer</hi> expediently. Besides, we also
+introduce <hi>a</hi> learnable mel-fbank energy feature extractor named time-domain
+feature extractor that computes the mel-fbank features more precisely and
+efficiently than the standard mel-fbank extractor. Combining Diffluence loss
+and Time-domain feature extractor, we propose <hi>a</hi> novel <hi>Transformer</hi>-based
+time-domain SV <hi>model</hi> (DT-SV) with faster training speed and higher accuracy.
+Experiments indicate that our proposed <hi>model</hi> can achieve better performance in
+comparison with other <hi>models</hi>.
+",27.405298553983787,000006
+59,2010.12155,"Transformer-based End-to-End Speech Recognition with Local Dense
+  Synthesizer Attention","  Recently, several studies reported that dot-product selfattention (SA) may
+not be indispensable <hi>to</hi> the state-of-theart <hi>Transformer</hi> <hi>models</hi>. Motivated by
+the fact that dense synthesizer attention (DSA), which dispenses with dot
+products and pairwise interactions, achieved competitive results in many
+language <hi>processing</hi> tasks, in this paper, we first propose <hi>a</hi> DSA-based speech
+recognition, as an alternative <hi>to</hi> SA. <hi>To</hi> reduce the computational complexity
+and improve the performance, we further propose local DSA (LDSA) <hi>to</hi> restrict
+the attention scope of DSA <hi>to</hi> <hi>a</hi> local range around the current central frame
+for speech recognition. Finally, we combine LDSA with SA <hi>to</hi> extract the local
+and global information simultaneously. Experimental results on the Ai-shell1
+Mandarine speech recognition corpus show that the proposed LDSA-<hi>Transformer</hi>
+achieves <hi>a</hi> character error rate (CER) of 6.49%, which <hi>is</hi> slightly better than
+that of the SA-<hi>Transformer</hi>. Meanwhile, the LDSA-<hi>Transformer</hi> requires less
+computation than the SATransformer. The proposed combination method not only
+achieves <hi>a</hi> CER of 6.18%, which significantly outperforms the SA-<hi>Transformer</hi>,
+but also has roughly the same number of parameters and computational complexity
+as the latter. The implementation of the multi-head LDSA <hi>is</hi> available at
+https://github.com/mlxu995/multihead-LDSA.
+",27.064555118669816,000006
