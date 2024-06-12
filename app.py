@@ -1,7 +1,7 @@
 import gradio as gr
 import pandas as pd
 from llm_model import LLMModel
-from search_engine import SearchEngine
+from search_engine_versions.search_engine_1 import SearchEngine
 
 DATA_DIR = "./data/"
 DATA_FILES = ["arxiv-metadata-oai-snapshot.json"]
@@ -14,7 +14,7 @@ model = LLMModel()
 
 
 def run_query(query, response_type):
-    docs = search_engine.search(query)
+    docs = search_engine.search(query, SearchEngine.query_params)
     response = model.generate_response(query, docs, response_type)
     return response
 
@@ -43,5 +43,12 @@ with gr.Blocks() as app:
     )
     gen_button.click(run_query, [query, response_type], result)
 
-
-app.launch()
+try:
+    app.launch()
+except Exception as e:
+    print(e)
+finally:
+    search_engine.docker.container.stop()
+    search_engine.docker.container.remove()
+    print("Sucessufly stopped and removed the docker container.")
+    
