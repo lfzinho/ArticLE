@@ -1,11 +1,11 @@
-""" serach_engine_v6 """
-
 import pandas as pd
 
 from vespa.package import ApplicationPackage, Field, Schema, Document, RankProfile, HNSW, RankProfile, Component, Parameter, FieldSet, GlobalPhaseRanking, Function
 from vespa.deployment import VespaDocker
 from datasets import load_dataset
 from vespa.io import VespaResponse, VespaQueryResponse
+
+
 
 
 class SearchEngine:
@@ -100,15 +100,12 @@ class SearchEngine:
             records.append(record)
         return pd.DataFrame(records)
 
-    def search(self, query, n_hits: int = 10):
+    def search(self, query, n_hits: int = 5):
         with self.app.syncio(connections=1) as session:
             response:VespaQueryResponse = session.query(
-                yql="select * from sources * where rank({targetHits:1000}nearestNeighbor(embedding, q), userQuery()) limit " + str(n_hits),
-                # yql="select * from sources * where  limit " + str(n_hits),
-                # yql=f"select * from sources * where userQuery() limit {n_hits}",
+                yql=f"select * from sources * where userQuery() limit {n_hits}",
                 query=query,
                 ranking="fusion",
-                body={"input.query(q)": f"embed({query})"},
             )
         assert(response.is_successful())
         return self.hits_to_df(response)
