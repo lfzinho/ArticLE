@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArticLE</title>
+    <link rel="icon" href="./images/article-logo.png">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/401bc3f456.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script defer src="./main.js"></script>
+</head>
+<body>
+    <div class="main-container">
+        <section class="content-section">
+            <div class="content-wrapper">
+                <img class="logo-img" src="./images/article-image.png" alt="ArticLE Logo">
+                <div class="search-bar">
+                    <i class="fa-solid fa-magnifying-glass"></i>            
+                    <input id="search-input" class="search-input" type="text">
+                </div>
+                <div class="search-btns">
+                    <button class="search-btn" id="show-btn">Show the results</button>
+                    <button class="search-btn" id="explain-btn">Explain the choices</button>
+                    <button class="search-btn" id="summary-btn">Summary</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="results-section" id="results-section">
+            <!-- The results will be displayed here -->
+        </section>
+
+        <footer>
+            <div class="footer-content lower-footer">
+                <ul class="lower-left-footer">
+                    <li>
+                        <a href="https://vespa.ai/">Vespa</a>
+                    </li>
+                    <li>
+                        <a href="https://vespa.ai/">How Search Works</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

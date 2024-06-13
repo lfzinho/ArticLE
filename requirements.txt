@@ -1,3 +1,8 @@
+datasets
+docker
+fastapi
+pandas
 pyvespa
 openai
 python-dotenv
+tqdm
