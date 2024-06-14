@@ -1,4 +1,4 @@
-"""Fusion version"""
+"""Search Engine using BM25 ranking with body field"""
 
 import pandas as pd
 
@@ -22,42 +22,21 @@ class SearchEngine:
                 document=Document(
                     fields=[
                         Field(name="id", type="string", indexing=["summary"]),
-                        Field(name="title", type="string", indexing=["index", "summary"], index="enable-bm25"),
-                        Field(name="body", type="string", indexing=["index", "summary"], index="enable-bm25", bolding=True),
-                        Field(name="embedding", type="tensor<float>(x[384])",
-                            indexing=["input title . \" \" . input body", "embed", "index", "attribute"],
-                            ann=HNSW(distance_metric="angular"),
-                            is_document_field=False
-                        )
+                        Field(name="body", type="string", indexing=["index", "summary"], index="enable-bm25"),
                     ]
                 ),
                 fieldsets=[
-                    FieldSet(name = "default", fields = ["title", "body"])
+                    FieldSet(name = "default", fields = ["body"])
                 ],
                 rank_profiles=[
                     RankProfile(
                         name="bm25",
                         inputs=[("query(q)", "tensor<float>(x[384])")],
                         functions=[Function(
-                            name="bm25sum", expression="bm25(title) + bm25(body)"
+                            name="bm25sum", expression="bm25(body)"
                         )],
                         first_phase="bm25sum"
                     ),
-                    RankProfile(
-                        name="semantic",
-                        inputs=[("query(q)", "tensor<float>(x[384])")],
-                        first_phase="closeness(field, embedding)"
-                    ),
-                    RankProfile(
-                        name="fusion",
-                        inherits="bm25",
-                        inputs=[("query(q)", "tensor<float>(x[384])")],
-                        first_phase="closeness(embedding)",
-                        global_phase=GlobalPhaseRanking(
-                            expression="bm25sum + closeness(embedding)",
-                            rerank_count=1000
-                        )
-                    )
                 ]
             )
             ],
@@ -86,12 +65,12 @@ class SearchEngine:
             data_files=data_files,
             split=f"train[0:{split_size_limit}]",
         )
-        vespa_feed = dataset.map(lambda x: {"id": x["id"], "fields": { "title": x["title"], "body": x["abstract"], "id": x["id"]}})
+        vespa_feed = dataset.map(lambda x: {"id": x["id"], "fields": { "body": x["body"], "id": x["id"]}})
         self.app.feed_iterable(vespa_feed, schema="doc", namespace="article", callback=self.callback)
 
     def hits_to_df(self, response:VespaQueryResponse) -> pd.DataFrame:
         records = []
-        fields = ["id", "title", "body"]
+        fields = ["id", "body"]
         for hit in response.hits:
             record = {}
             for field in fields:
@@ -100,20 +79,12 @@ class SearchEngine:
             records.append(record)
         return pd.DataFrame(records)
 
-    def search(self, query, n_hits: int = 10):
+    def search(self, query, n_hits: int = 5):
         with self.app.syncio(connections=1) as session:
             response:VespaQueryResponse = session.query(
-                yql="select * from sources * where rank({targetHits:1000}nearestNeighbor(embedding, q), userQuery()) limit " + str(n_hits),
-                # yql="select * from sources * where  limit " + str(n_hits),
-                # yql=f"select * from sources * where userQuery() limit {n_hits}",
+                yql=f"select * from sources * where userQuery() limit {n_hits}",
                 query=query,
-                ranking="fusion",
-                body={"input.query(q)": f"embed({query})"},
+                ranking="bm25",
             )
         assert(response.is_successful())
         return self.hits_to_df(response)
-    
-# Usage
-# se = SearchEngine()
-# se.feed_json(DATA_FILES)
-# se.query("Machine learning and data science and stock market", n_hits=10)

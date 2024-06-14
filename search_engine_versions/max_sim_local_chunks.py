@@ -1,4 +1,4 @@
-"""Colbert version"""
+"""Search Engine using Colbert Max Sim Global ranking with body and title fields and chunk split"""
 
 import pandas as pd
 
@@ -8,9 +8,6 @@ from vespa.package import ApplicationPackage, Field, Schema, Document, RankProfi
 from vespa.deployment import VespaDocker
 from datasets import load_dataset
 from vespa.io import VespaResponse, VespaQueryResponse
-
-def basic_split(string, split_on="."):
-    return string.split(split_on)
 
 def chunk_split(string, chunk_size=1024, chunk_overlap=0):
     chunks = []
@@ -58,25 +55,6 @@ class SearchEngine:
                             Field(name="title", type="string", indexing=["index", "summary"]),
                             Field(name="body", type="array<string>", indexing=["summary", "index"]),
                             Field(name="authors", type="array<string>", indexing=["summary", "index"]),
-                            # Field(
-                            #     name="metadata",
-                            #     type="map<string,string>",
-                            #     indexing=["summary", "index"],
-                            # ),
-                            # Field(name="page", type="int", indexing=["summary", "attribute"]),
-                            # Field(name="contexts", type="array<string>", indexing=["summary", "index"]),
-                            Field(
-                                name="embedding",
-                                type="tensor<bfloat16>(body{}, x[384])",
-                                indexing=[
-                                    "input body",
-                                    'for_each { (input title || "") . " " . ( _ || "") }',
-                                    "embed e5",
-                                    "attribute",
-                                ],
-                                attribute=["distance-metric: angular"],
-                                is_document_field=False,
-                            ),
                             Field(
                                 name="embedding",
                                 type="tensor<bfloat16>(body{}, x[384])",
@@ -244,15 +222,7 @@ class SearchEngine:
                 "id": row["id"], # str
                 "title": row["title"], # str
                 "body": text_chunks, # list[str]
-                "authors": chunk_split(remove_control_characters(row["authors"]), chunk_size=100, chunk_overlap=10), # list[str]
-                # "authors": remove_control_characters(row["authors"]).split(", "), # list[str]
-                # "categories": row["categories"],
-                # "doi": row["doi"],
-                # "journal-ref": row["journal-ref"],
-                # "license": row["license"],
-                # "report-no": row["report-no"],
-                # "submitter": row["submitter"],
-                # "update_date": row["update_date"],
+                "authors": chunk_split(remove_control_characters(row["authors"]), chunk_size=510, chunk_overlap=25), # list[str]
             }
 
             docs.append(fields)
@@ -280,21 +250,14 @@ class SearchEngine:
     def search(self, query, n_hits: int = 5):
         with self.app.syncio(connections=1) as session:
             response:VespaQueryResponse = session.query(
-                # yql="select * from sources * where rank({targetHits:1000}nearestNeighbor(embedding, q), userQuery()) limit " + str(n_hits),
-                yql="select * from sources * where ({targetHits:100}nearestNeighbor(embedding,q))",
+                yql="select * from sources * where ({targetHits:1000}nearestNeighbor(embedding,q))",
                 groupname="article-groupname",
-                ranking="colbert_global",
+                ranking="colbert_local",
                 query=query,
                 body={
-                    # "presentation.format.tensors": "short-value",
                     "input.query(q)": f'embed(e5, "{query}")',
                     "input.query(qt)": f'embed(colbert, "{query}")',
                 },
             )
         assert(response.is_successful())
         return self.hits_to_df(response)
-    
-# Usage
-# se = SearchEngine()
-# se.feed_json(DATA_FILES)
-# se.query("Machine learning and data science and stock market", n_hits=10)
