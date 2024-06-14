@@ -6,3 +6,6 @@ app/data/*
 !data/.gitkeep
 .env
 __pycache__
+
+# testing files
+app/test.ipynb

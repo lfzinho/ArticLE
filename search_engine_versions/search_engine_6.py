@@ -1,4 +1,4 @@
-"""Version using only the title"""
+"""Fusion version"""
 
 import pandas as pd
 
