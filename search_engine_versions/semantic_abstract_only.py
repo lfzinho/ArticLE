@@ -16,7 +16,7 @@ class SearchEngine:
 
     def set_package(self):
         self.package = ApplicationPackage(
-            name="semantic_abstract_only",
+            name="semanticabstractonly",
             schema=[Schema(
                 name="doc",
                 document=Document(

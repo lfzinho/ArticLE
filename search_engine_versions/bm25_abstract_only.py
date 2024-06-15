@@ -16,7 +16,7 @@ class SearchEngine:
 
     def set_package(self):
         self.package = ApplicationPackage(
-            name="bm25_abstract_only",
+            name="bm25abstractonly",
             schema=[Schema(
                 name="doc",
                 document=Document(

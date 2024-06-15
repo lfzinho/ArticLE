@@ -43,7 +43,7 @@ class SearchEngine:
 
     def set_package(self):
         self.package = ApplicationPackage(
-            name="max_sim_per_context_sentences_abstract_only",
+            name="maxsimpercontextsentencesabstractonly",
             schema=[
                 Schema(
                     name="doc",

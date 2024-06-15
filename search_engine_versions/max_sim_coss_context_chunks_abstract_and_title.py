@@ -44,7 +44,7 @@ class SearchEngine:
 
     def set_package(self):
         self.package = ApplicationPackage(
-            name="max_sim_coss_context_chunks_abstract_and_title",
+            name="maxsimcosscontextchunksabstractandtitle",
             schema=[
                 Schema(
                     name="doc",
