@@ -1,4 +1,4 @@
-"""Search Engine using Colbert Max Sim Global ranking with body and title fields and chunk split"""
+"""Search Engine using Colbert Max Sim Global ranking with abstract and title fields and chunk split"""
 
 import pandas as pd
 
@@ -44,7 +44,7 @@ class SearchEngine:
 
     def set_package(self):
         self.package = ApplicationPackage(
-            name="colbert",
+            name="max_sim_coss_context_chunks_abstract_and_title",
             schema=[
                 Schema(
                     name="doc",
@@ -252,7 +252,7 @@ class SearchEngine:
             response:VespaQueryResponse = session.query(
                 yql="select * from sources * where ({targetHits:1000}nearestNeighbor(embedding,q))",
                 groupname="article-groupname",
-                ranking="colbert_local",
+                ranking="colbert_global",
                 query=query,
                 body={
                     "input.query(q)": f'embed(e5, "{query}")',

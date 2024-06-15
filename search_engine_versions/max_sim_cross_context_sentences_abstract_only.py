@@ -1,4 +1,4 @@
-"""Search Engine using Colbert Max Sim Global ranking with body and title fields and chunk split"""
+"""Search Engine using Colbert Max Sim Global ranking with the abstract field and sentence split"""
 
 import pandas as pd
 
@@ -9,11 +9,10 @@ from vespa.deployment import VespaDocker
 from datasets import load_dataset
 from vespa.io import VespaResponse, VespaQueryResponse
 
-def chunk_split(string, chunk_size=1024, chunk_overlap=0):
-    chunks = []
-    for i in range(0, len(string), chunk_size - chunk_overlap):
-        chunks.append(string[i:i + chunk_size])
-    return chunks
+
+def sentence_split(string, split_on="."):
+    return string.split(split_on)
+
 
 def remove_control_characters(s):
     s = s.replace("\\", "")
@@ -44,7 +43,7 @@ class SearchEngine:
 
     def set_package(self):
         self.package = ApplicationPackage(
-            name="colbert",
+            name="max_sim_cross_context_sentences_abstract_only",
             schema=[
                 Schema(
                     name="doc",
@@ -52,7 +51,6 @@ class SearchEngine:
                     document=Document(
                         fields=[
                             Field(name="id", type="string", indexing=["summary"]),
-                            Field(name="title", type="string", indexing=["index", "summary"]),
                             Field(name="body", type="array<string>", indexing=["summary", "index"]),
                             Field(name="authors", type="array<string>", indexing=["summary", "index"]),
                             Field(
@@ -60,7 +58,6 @@ class SearchEngine:
                                 type="tensor<bfloat16>(body{}, x[384])",
                                 indexing=[
                                     "input body",
-                                    'for_each { (input title || "") . " " . ( _ || "") }',
                                     "embed e5",
                                     "attribute",
                                 ],
@@ -156,14 +153,6 @@ class SearchEngine:
                                 "url": "https://huggingface.co/intfloat/e5-small-v2/raw/main/tokenizer.json"
                             },
                         ),
-                        # Parameter(
-                        #     name="prepend",
-                        #     args={},
-                        #     children=[
-                        #         Parameter(name="query", args={}, children="query: "),
-                        #         Parameter(name="document", args={}, children="passage: "),
-                        #     ],
-                        # ),
                     ],
                 ),
                 Component(
@@ -192,13 +181,6 @@ class SearchEngine:
 
     def set_app(self):
         self.app = self.docker.deploy(application_package=self.package)
-        # self.text_splitter = RecursiveCharacterTextSplitter(
-        #     chunk_size=1024,
-        #     chunk_overlap=0,
-        #     length_function=len,
-        #     is_separator_regex=False,
-        # )
-        # self.text_splitter = SemanticChunker(OpenAIEmbeddings())
 
     def callback(self, response, id):
         if not response.is_successful():
@@ -220,9 +202,8 @@ class SearchEngine:
                 text_chunks = text_chunks[:-1]
             fields = {
                 "id": row["id"], # str
-                "title": row["title"], # str
                 "body": text_chunks, # list[str]
-                "authors": chunk_split(remove_control_characters(row["authors"]), chunk_size=510, chunk_overlap=25), # list[str]
+                "authors": sentence_split(remove_control_characters(row["authors"])), # list[str]
             }
 
             docs.append(fields)
@@ -235,7 +216,7 @@ class SearchEngine:
 
     def hits_to_df(self, response:VespaQueryResponse) -> pd.DataFrame:
         records = []
-        fields = ["id", "title", "body", "authors"]
+        fields = ["id", "body", "authors"]
         for hit in response.hits:
             record = {}
             for field in fields:

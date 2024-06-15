@@ -1,8 +1,4 @@
-"""
-This file is for reference only.
-Complete version of all Colbert variations, with commented out sections for future reference.
-Do not remove from this file, only add.
-"""
+"""Search Engine using Colbert Max Sim Global ranking with abstract and title fields and sentence split"""
 
 import pandas as pd
 
@@ -13,14 +9,10 @@ from vespa.deployment import VespaDocker
 from datasets import load_dataset
 from vespa.io import VespaResponse, VespaQueryResponse
 
-def basic_split(string, split_on="."):
+
+def sentence_split(string, split_on="."):
     return string.split(split_on)
 
-def chunk_split(string, chunk_size=1024, chunk_overlap=0):
-    chunks = []
-    for i in range(0, len(string), chunk_size - chunk_overlap):
-        chunks.append(string[i:i + chunk_size])
-    return chunks
 
 def remove_control_characters(s):
     s = s.replace("\\", "")
@@ -51,7 +43,7 @@ class SearchEngine:
 
     def set_package(self):
         self.package = ApplicationPackage(
-            name="colbert",
+            name="max_sim_per_context_sentences_abstract_and_title",
             schema=[
                 Schema(
                     name="doc",
@@ -62,25 +54,6 @@ class SearchEngine:
                             Field(name="title", type="string", indexing=["index", "summary"]),
                             Field(name="body", type="array<string>", indexing=["summary", "index"]),
                             Field(name="authors", type="array<string>", indexing=["summary", "index"]),
-                            # Field(
-                            #     name="metadata",
-                            #     type="map<string,string>",
-                            #     indexing=["summary", "index"],
-                            # ),
-                            # Field(name="page", type="int", indexing=["summary", "attribute"]),
-                            # Field(name="contexts", type="array<string>", indexing=["summary", "index"]),
-                            Field(
-                                name="embedding",
-                                type="tensor<bfloat16>(body{}, x[384])",
-                                indexing=[
-                                    "input body",
-                                    'for_each { (input title || "") . " " . ( _ || "") }',
-                                    "embed e5",
-                                    "attribute",
-                                ],
-                                attribute=["distance-metric: angular"],
-                                is_document_field=False,
-                            ),
                             Field(
                                 name="embedding",
                                 type="tensor<bfloat16>(body{}, x[384])",
@@ -182,14 +155,6 @@ class SearchEngine:
                                 "url": "https://huggingface.co/intfloat/e5-small-v2/raw/main/tokenizer.json"
                             },
                         ),
-                        # Parameter(
-                        #     name="prepend",
-                        #     args={},
-                        #     children=[
-                        #         Parameter(name="query", args={}, children="query: "),
-                        #         Parameter(name="document", args={}, children="passage: "),
-                        #     ],
-                        # ),
                     ],
                 ),
                 Component(
@@ -218,13 +183,6 @@ class SearchEngine:
 
     def set_app(self):
         self.app = self.docker.deploy(application_package=self.package)
-        # self.text_splitter = RecursiveCharacterTextSplitter(
-        #     chunk_size=1024,
-        #     chunk_overlap=0,
-        #     length_function=len,
-        #     is_separator_regex=False,
-        # )
-        # self.text_splitter = SemanticChunker(OpenAIEmbeddings())
 
     def callback(self, response, id):
         if not response.is_successful():
@@ -248,15 +206,7 @@ class SearchEngine:
                 "id": row["id"], # str
                 "title": row["title"], # str
                 "body": text_chunks, # list[str]
-                "authors": chunk_split(remove_control_characters(row["authors"]), chunk_size=100, chunk_overlap=10), # list[str]
-                # "authors": remove_control_characters(row["authors"]).split(", "), # list[str]
-                # "categories": row["categories"],
-                # "doi": row["doi"],
-                # "journal-ref": row["journal-ref"],
-                # "license": row["license"],
-                # "report-no": row["report-no"],
-                # "submitter": row["submitter"],
-                # "update_date": row["update_date"],
+                "authors": sentence_split(remove_control_characters(row["authors"])), # list[str]
             }
 
             docs.append(fields)
@@ -284,21 +234,14 @@ class SearchEngine:
     def search(self, query, n_hits: int = 5):
         with self.app.syncio(connections=1) as session:
             response:VespaQueryResponse = session.query(
-                # yql="select * from sources * where rank({targetHits:1000}nearestNeighbor(embedding, q), userQuery()) limit " + str(n_hits),
                 yql="select * from sources * where ({targetHits:1000}nearestNeighbor(embedding,q))",
                 groupname="article-groupname",
-                ranking="colbert_global",
+                ranking="colbert_local",
                 query=query,
                 body={
-                    # "presentation.format.tensors": "short-value",
                     "input.query(q)": f'embed(e5, "{query}")',
                     "input.query(qt)": f'embed(colbert, "{query}")',
                 },
             )
         assert(response.is_successful())
         return self.hits_to_df(response)
-    
-# Usage
-# se = SearchEngine()
-# se.feed_json(DATA_FILES)
-# se.query("Machine learning and data science and stock market", n_hits=10)

@@ -1,4 +1,5 @@
-"""Search Engine using Colbert Max Sim Global ranking with body and title fields and sentence split"""
+"""Search Engine using Colbert Max Sim Global ranking with abstract
+ and title fields and chunk split"""
 
 import pandas as pd
 
@@ -9,10 +10,11 @@ from vespa.deployment import VespaDocker
 from datasets import load_dataset
 from vespa.io import VespaResponse, VespaQueryResponse
 
-
-def sentence_split(string, split_on="."):
-    return string.split(split_on)
-
+def chunk_split(string, chunk_size=1024, chunk_overlap=0):
+    chunks = []
+    for i in range(0, len(string), chunk_size - chunk_overlap):
+        chunks.append(string[i:i + chunk_size])
+    return chunks
 
 def remove_control_characters(s):
     s = s.replace("\\", "")
@@ -43,7 +45,7 @@ class SearchEngine:
 
     def set_package(self):
         self.package = ApplicationPackage(
-            name="colbert",
+            name="max_sim_per_context_chunks_abstract_and_title",
             schema=[
                 Schema(
                     name="doc",
@@ -155,6 +157,14 @@ class SearchEngine:
                                 "url": "https://huggingface.co/intfloat/e5-small-v2/raw/main/tokenizer.json"
                             },
                         ),
+                        # Parameter(
+                        #     name="prepend",
+                        #     args={},
+                        #     children=[
+                        #         Parameter(name="query", args={}, children="query: "),
+                        #         Parameter(name="document", args={}, children="passage: "),
+                        #     ],
+                        # ),
                     ],
                 ),
                 Component(
@@ -183,6 +193,13 @@ class SearchEngine:
 
     def set_app(self):
         self.app = self.docker.deploy(application_package=self.package)
+        # self.text_splitter = RecursiveCharacterTextSplitter(
+        #     chunk_size=1024,
+        #     chunk_overlap=0,
+        #     length_function=len,
+        #     is_separator_regex=False,
+        # )
+        # self.text_splitter = SemanticChunker(OpenAIEmbeddings())
 
     def callback(self, response, id):
         if not response.is_successful():
@@ -206,7 +223,7 @@ class SearchEngine:
                 "id": row["id"], # str
                 "title": row["title"], # str
                 "body": text_chunks, # list[str]
-                "authors": sentence_split(remove_control_characters(row["authors"])), # list[str]
+                "authors": chunk_split(remove_control_characters(row["authors"]), chunk_size=510, chunk_overlap=25), # list[str]
             }
 
             docs.append(fields)

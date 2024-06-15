@@ -16,7 +16,7 @@ class SearchEngine:
 
     def set_package(self):
         self.package = ApplicationPackage(
-            name="hybridsearch",
+            name="bm25_abstract_and_title",
             schema=[Schema(
                 name="doc",
                 document=Document(
@@ -66,7 +66,7 @@ class SearchEngine:
             data_files=data_files,
             split=f"train[0:{split_size_limit}]",
         )
-        vespa_feed = dataset.map(lambda x: {"id": x["id"], "fields": { "body": x["body"], "title": x["title"], "id": x["id"]}})
+        vespa_feed = dataset.map(lambda x: {"id": x["id"], "fields": { "body": x["abstract"], "title": x["title"], "id": x["id"]}})
         self.app.feed_iterable(vespa_feed, schema="doc", namespace="article", callback=self.callback)
 
     def hits_to_df(self, response:VespaQueryResponse) -> pd.DataFrame:

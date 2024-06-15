@@ -1,4 +1,4 @@
-"""Search Engine using BM25 ranking with title field"""
+"""Search Engine using Semantic Search ranking with abstract and title fields"""
 
 import pandas as pd
 
@@ -16,26 +16,29 @@ class SearchEngine:
 
     def set_package(self):
         self.package = ApplicationPackage(
-            name="hybridsearch",
+            name="semantic_abstract_and_title",
             schema=[Schema(
                 name="doc",
                 document=Document(
                     fields=[
                         Field(name="id", type="string", indexing=["summary"]),
                         Field(name="title", type="string", indexing=["index", "summary"], index="enable-bm25"),
+                        Field(name="body", type="string", indexing=["index", "summary"], index="enable-bm25", bolding=True),
+                        Field(name="embedding", type="tensor<float>(x[384])",
+                            indexing=["input title . \" \" . input body", "embed", "index", "attribute"],
+                            ann=HNSW(distance_metric="angular"),
+                            is_document_field=False
+                        )
                     ]
                 ),
                 fieldsets=[
-                    FieldSet(name = "default", fields = ["title"])
+                    FieldSet(name = "default", fields = ["title", "body"])
                 ],
                 rank_profiles=[
                     RankProfile(
-                        name="bm25",
+                        name="semantic",
                         inputs=[("query(q)", "tensor<float>(x[384])")],
-                        functions=[Function(
-                            name="bm25sum", expression="bm25(title)"
-                        )],
-                        first_phase="bm25sum"
+                        first_phase="closeness(field, embedding)"
                     ),
                 ]
             )
@@ -65,12 +68,12 @@ class SearchEngine:
             data_files=data_files,
             split=f"train[0:{split_size_limit}]",
         )
-        vespa_feed = dataset.map(lambda x: {"id": x["id"], "fields": { "title": x["title"], "id": x["id"]}})
+        vespa_feed = dataset.map(lambda x: {"id": x["id"], "fields": { "title": x["title"], "body": x["abstract"], "id": x["id"]}})
         self.app.feed_iterable(vespa_feed, schema="doc", namespace="article", callback=self.callback)
 
     def hits_to_df(self, response:VespaQueryResponse) -> pd.DataFrame:
         records = []
-        fields = ["id", "title"]
+        fields = ["id", "title", "body"]
         for hit in response.hits:
             record = {}
             for field in fields:
@@ -79,12 +82,20 @@ class SearchEngine:
             records.append(record)
         return pd.DataFrame(records)
 
-    def search(self, query, n_hits: int = 5):
+    def search(self, query, n_hits: int = 10):
         with self.app.syncio(connections=1) as session:
             response:VespaQueryResponse = session.query(
-                yql=f"select * from sources * where userQuery() limit {n_hits}",
+                yql="select * from sources * where ({targetHits:1000}nearestNeighbor(embedding, q)) limit " + str(n_hits),
+                # yql="select * from sources * where  limit " + str(n_hits),
+                # yql=f"select * from sources * where userQuery() limit {n_hits}",
                 query=query,
-                ranking="bm25",
+                ranking="semantic",
+                body={"input.query(q)": f"embed({query})"},
             )
         assert(response.is_successful())
         return self.hits_to_df(response)
+    
+# Usage
+# se = SearchEngine()
+# se.feed_json(DATA_FILES)
+# se.query("Machine learning and data science and stock market", n_hits=10)
