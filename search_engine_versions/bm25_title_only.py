@@ -16,7 +16,7 @@ class SearchEngine:
 
     def set_package(self):
         self.package = ApplicationPackage(
-            name="hybridsearch",
+            name="bm25_title_only",
             schema=[Schema(
                 name="doc",
                 document=Document(

@@ -51,7 +51,7 @@ class SearchEngine:
 
     def set_package(self):
         self.package = ApplicationPackage(
-            name="colbert",
+            name="BACKUP_MAXSIM",
             schema=[
                 Schema(
                     name="doc",
