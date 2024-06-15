@@ -7,7 +7,7 @@ import pandas as pd
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
-from google.oauth2.credentials import Credentials
+from google.oauth2.service_account import Credentials
 
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 SPREADSHEET_ID = '1R4Wo4gQG-zopWZvrpGz5WJtKkkSr9ULrwTUmRg9X29Y'
@@ -39,16 +39,9 @@ class SaveMetrics():
         Credentials
             Credenciais do Google Sheets
         '''
-        creds = None
-        if os.path.exists('token.json'):
-            creds = Credentials.from_authorized_user_file('token.json', SCOPES)
-        if not creds or not creds.valid:
-            if creds and creds.expired and creds.refresh_token:
-                creds.refresh(Request())
-            else:
-                flow = InstalledAppFlow.from_client_secrets_file(
-                    'client_secret.json', SCOPES)
-                creds = flow.run_local_server(port=0)
+        # Carregar credenciais da conta de serviço
+        creds = Credentials.from_service_account_file(
+            'client_secret.json', scopes=SCOPES)
         return creds
 
     def append_metrics(self, type_of_metric:str, data:pd.DataFrame) -> None:
