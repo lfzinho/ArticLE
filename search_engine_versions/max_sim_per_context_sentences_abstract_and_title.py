@@ -1,4 +1,4 @@
-"""Search Engine using Colbert Max Sim Global ranking with body and title fields and sentence split"""
+"""Search Engine using Colbert Max Sim Global ranking with abstract and title fields and sentence split"""
 
 import pandas as pd
 
