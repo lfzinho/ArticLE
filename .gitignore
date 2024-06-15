@@ -170,3 +170,6 @@ __pycache__
 
 # testing files
 app/test.ipynb
+
+client_secret.json
+*.json
