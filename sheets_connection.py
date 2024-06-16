@@ -4,6 +4,7 @@ Classe para salvar os dados no Google Sheets
 
 import os.path
 import pandas as pd
+import re
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
@@ -46,7 +47,7 @@ class SaveMetrics():
 
     def append_metrics(self, type_of_metric:str, data:pd.DataFrame) -> None:
         '''
-        Função para salvar os dados no Google Sheets
+        Função para adicionar uma linha de dados no Google Sheets
 
         Parâmetros
         ----------
@@ -90,3 +91,87 @@ class SaveMetrics():
             valueInputOption="RAW",
             body={"values": values}
         ).execute()
+
+    def set_metric_of_query_and_model(
+            self, 
+            type_of_metric:str, 
+            query:str, 
+            model_name:str, 
+            result:float
+        ) -> None:
+        '''
+        Função para salvar o resultado da métrica de uma query e modelo no Google Sheets.
+        Esse método depende da tabela estar preparada com o id das queries na
+        primeira coluna (A2 em diante) e o nome dos modelos na 
+        primeira linha (B2 em diante).
+
+        Parâmetros
+        ----------
+        type_of_metric : str
+            Tipo de métrica que será salva no Google Sheets
+        query : str
+            Query que foi utilizada para fazer o search com o modelo
+        model_name : str
+            Nome do modelo
+        result : float
+            Resultado da métrica para a query e modelo especificados
+
+        Retorna
+        ----------
+        range : str
+            Localização do resultado no Google Sheets
+        '''
+        # Pega os valores atuais da primeira linha do sheet
+        first_row = self.sheet.values().get(
+            spreadsheetId=SPREADSHEET_ID,
+            range=":".join([re.sub(r'\d+', '', col) + "1" for col in self.range.split(':')])
+        ).execute()
+        models = first_row.get('values', [])[0]
+        
+        # Pega os valores atuais da primeira coluna do sheet
+        first_column = self.sheet.values().get(
+            spreadsheetId=SPREADSHEET_ID,
+            range=f"{type_of_metric}!A:A"
+        ).execute()
+        queries = [l[0] for l in first_column.get('values', [])]
+
+        # Obtém a posição da célula referente à query e ao modelo
+        row = queries.index(query) + 1
+        col = models.index(model_name) + 1
+        
+        # Define a página e o range
+        range = f"{type_of_metric}!{convert_number_to_column_name(col)}{row}"
+
+        # Atualiza o sheet
+        self.sheet.values().update(
+            spreadsheetId=SPREADSHEET_ID,
+            range=range,
+            valueInputOption="RAW",
+            body={"values": [[result]]}
+        ).execute()
+
+        # Retorna a localização do resultado
+        return range
+
+def convert_number_to_column_name(number):
+        '''
+        Função para converter um número em uma coluna do Google Sheets (Notação A1).
+
+        Parâmetros
+        ----------
+        number : int
+            Número da coluna (inicia em 1)
+
+        Retorna
+        ----------
+        col : str
+            Coluna do Google Sheets
+        '''
+        col = ''
+        while number > 0:
+            number -= 1
+            letter = number % 26
+            number = number // 26 
+            letter = chr(65 + letter)
+            col = letter + col
+        return col
