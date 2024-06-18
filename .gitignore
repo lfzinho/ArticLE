@@ -162,6 +162,7 @@ cython_debug/
 .vscode/
 
 AuthKey.txt
+AuthKey.py
 data/*
 app/data/*
 !data/.gitkeep
