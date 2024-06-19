@@ -28,8 +28,8 @@ class SearchEngine:
         self,
         queries: Iterable[str],
         n_hits: int,
-        connect_timeout: float = 5.0,
-        read_timeout: float = 10.0
+        connect_timeout: float = 50.0,
+        read_timeout: float = 100.0
     ) -> list[VespaQueryResponse]:
         results = []
         with self.app.syncio(connections=1) as session:
