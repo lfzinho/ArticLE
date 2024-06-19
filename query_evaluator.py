@@ -19,12 +19,14 @@ client = Groq(
 
 def evaluate_articles_boolean(artigos, 
                       query,
+                      true_id,
                       model = 'llama3-70b-8192',
                       max_tokens = 1000,
                       verbose = True):
     """
     artigos: list of dictionaries with the following keys: 'title', 'abstract'
     query: string with the query that the articles will be evaluated against
+    true_id: id of the article that is known to be relevant to the query
 
     Returns a list of dictionaries with the following keys: 'title', 'abstract', 'eval', where 'eval' is a boolean value where 1 means relevant and 0 means not relevant to the query    
     """
@@ -56,7 +58,8 @@ def evaluate_articles_boolean(artigos,
                     max_tokens = max_tokens)
                 if int(response.choices[0].message.content.lower()) in [0, 1]:
                     print('id:', artigo['id'])
-                    evaluated.append({'id': artigo['id'], 'title': artigo['title'], 'abstract': artigo['abstract'], 'eval': response.choices[0].message.content.lower()})
+                    evaluation = response.choices[0].message.content.lower() if artigo['id'] != true_id else 1
+                    evaluated.append({'id': artigo['id'], 'title': artigo['title'], 'abstract': artigo['abstract'], 'eval': evaluation})
                     if verbose: print(f"Article '{artigo['title']}' {artigo['id']} evaluated as {response.choices[0].message.content.lower()}")
                     break
                 else:
@@ -138,12 +141,14 @@ def get_feedback_json(artigo, query, response, model = 'llama3-70b-8192', max_to
 
 def evaluate_articles_levels(artigos, 
                       query,
+                      true_id,
                       model = 'llama3-70b-8192',
                       max_tokens = 1000,
                       verbose = True):
     """
     artigos: list of dictionaries with the following keys: 'title', 'abstract'
     query: string with the query that the articles will be evaluated against
+    true_id: id of the article that is known to be relevant to the query
 
     Returns a list of dictionaries with the following keys: 'title', 'abstract', 'eval', 
     where 'eval' is an integer from 0 to 3 where 0 means no relevance, 1 is very slightly relevant,
@@ -166,5 +171,7 @@ def evaluate_articles_levels(artigos,
         feedback = get_feedback_json(artigo, query, response, model, max_tokens)
         
         if verbose: print(f"Article: '{artigo['title']}'\n Classification: {feedback}")
+        if artigo['id'] == true_id:
+            feedback['eval'] = 3
         evaluated.append({'title': artigo['title'], 'abstract': artigo['abstract'], 'eval': feedback['eval']})
     return evaluated
