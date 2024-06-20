@@ -6,3 +6,6 @@ pyvespa
 openai
 python-dotenv
 tqdm
+groq
+google-api-python-client
+google_auth_oauthlib
