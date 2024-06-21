@@ -164,10 +164,10 @@ cython_debug/
 AuthKey.txt
 AuthKey.py
 data/*
-app/data/*
 !data/.gitkeep
+client_secret.json
+app/data/*
 .env
-__pycache__
 
 # testing files
 app/test.ipynb
