@@ -1,2 +1,10 @@
 google-api-python-client
 google_auth_oauthlib
+datasets
+docker
+fastapi
+pandas
+pyvespa
+openai
+python-dotenv
+tqdm

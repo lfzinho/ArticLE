@@ -1,0 +1,7 @@
+version 1: bm25(title)
+version 2: bm25(body)
+version 3: bm25(title) + bm25(body)
+version 4: closeness(title, embedding)
+version 5: closeness(body, embedding)
+version 6: bm25(body) + bm25(title) + closeness(title, embedding) + closeness(body, embedding)
+version 7: colbert
